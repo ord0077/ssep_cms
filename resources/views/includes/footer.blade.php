@@ -1,12 +1,12 @@
 <!-- begin::footer -->
 <footer>
     <div class="container-fluid">
-        <div>© 2021 Powered by <a href="https://orangeroomdigital.com/">Orange Room Digital</a></div>
+        <div>{{ __('site.powered_by') }} <a href="https://orangeroomdigital.com/">{{ __('site.orange_room_digital') }}</a></div>
         <div>
             <nav class="nav">
-                <a href="#" class="nav-link">Licenses</a>
-                <a href="#" class="nav-link">Change Log</a>
-                <a href="#" class="nav-link">Get Help</a>
+                <a href="#" class="nav-link">{{ __('site.licenses') }}</a>
+                <a href="#" class="nav-link">{{ __('site.change_log') }}</a>
+                <a href="#" class="nav-link">{{ __('site.get_help') }}</a>
             </nav>
         </div>
     </div>
