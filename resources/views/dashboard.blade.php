@@ -1,16 +1,16 @@
-<?php include('includes/inc.header.php')?>
+@include('includes.header')
 <div id="main">
-    <?php include('includes/inc.sidebar.php')?>
+    @include('includes/sidebar')
 
     <!-- begin::main content -->
     <div class="main-content">
         <div class="page-header">
             <div class="container-fluid d-sm-flex justify-content-between">
-                <h4>Complaint Management System</h4>
+                <h4>{{ __('site.cms') }}</h4>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="#">Dashboard</a>
+                            <a href="#">{{ __('site.dashboard') }}</a>
                         </li>
                     </ol>
                 </nav>
@@ -20,13 +20,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Complaints</h1>
+                    <h1>{{ __('site.complaints') }}</h1>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card card-body" onClick="location.href='complaints-queued.php'" style="cursor:pointer">
                                 <h3 class="mb-3">
                                     32
-                                    <small>New Complaints</small>
+                                    <small>{{ __('site.new_complaints') }}</small>
                                 </h3>
                                 <div class="progress mb-2" style="height: 5px">
                                     <div class="progress-bar bg-primary" role="progressbar"
@@ -39,7 +39,7 @@
                             <div class="card card-body" onClick="location.href='complaints-processing.php'" style="cursor:pointer">
                                 <h3 class="mb-3">
                                     70
-                                    <small>Complaints in Process</small>
+                                    <small>{{ __('site.complaints_process') }}</small>
                                 </h3>
                                 <div class="progress mb-2" style="height: 5px">
                                     <div class="progress-bar bg-success" role="progressbar"
@@ -52,7 +52,7 @@
                             <div class="card card-body" onClick="location.href='complaints-resolved.php'" style="cursor:pointer">
                                 <h4 class="mb-3">
                                     125
-                                    <small>Complaints Resolved</small>
+                                    <small>{{ __('site.complaints_resolved') }}</small>
                                 </h4>
                                 <div class="progress mb-2" style="height: 5px">
                                     <div class="progress-bar bg-info" role="progressbar"
@@ -67,13 +67,13 @@
                         <div class="col-lg-8 col-md-12">
                             <div class="card" style="padding-bottom: 6px;">
                                 <div class="card-body">
-                                    <h1>Inquiries</h1>
+                                    <h1>{{ __('site.inquiries') }}</h1>
                                     <div class="row">
                                         <div class="col-lg-4 col-md-12">
                                             <div class="card bg-primary-bright text-primary">
                                                 <div class="card-body text-center" onClick="location.href='inquiries-completed.php'" style="cursor:pointer">
                                                     <h2 class="font-weight-bold">12</h2>
-                                                    <div>Completed</div>
+                                                    <div>{{ __('site.completed') }}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,7 +82,7 @@
                                             <div class="card bg-success-bright text-success">
                                                 <div class="card-body text-center" onClick="location.href='inquiries-processing.php'" style="cursor:pointer">
                                                     <h2 class="font-weight-bold">16</h2>
-                                                    <div>In Process</div>
+                                                    <div>{{ __('site.in_process') }}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -91,7 +91,7 @@
                                             <div class="card bg-danger-bright text-danger">
                                                 <div class="card-body text-center" onClick="location.href='inquiries-queued.php'" style="cursor:pointer">
                                                     <h2 class="font-weight-bold">3</h2>
-                                                    <div>Queued</div>
+                                                    <div>{{ __('site.queued') }}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -104,7 +104,7 @@
                             <div class="card card-body" onClick="location.href='missed-calls.php'" style="cursor:pointer">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div>
-                                        <h6 class="card-title mb-3">Missed Calls</h6>
+                                        <h6 class="card-title mb-3">{{ __('site.missed_calls') }}</h6>
                                         <div class="d-flex d-sm-block d-lg-flex align-items-end">
                                             <h2 class="mb-0 mr-2 font-weight-bold">25</h2>
                                         </div>
@@ -121,7 +121,7 @@
                             <div class="card card-body" onClick="location.href='received-calls.php'" style="cursor:pointer">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div>
-                                        <h6 class="card-title mb-3">Received Calls</h6>
+                                        <h6 class="card-title mb-3">{{ __('site.recieved-calls') }}</h6>
                                         <div class="d-flex d-sm-block d-lg-flex align-items-end">
                                             <h2 class="mb-0 mr-2 font-weight-bold">76</h2>
                                         </div>
@@ -143,10 +143,10 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="card-title">Recent Complaints</h6>
+                                        <h6 class="card-title">{{ __('site.recent_complaints') }}</h6>
                                         <div>
                                             <a href="complaints-queued.php" class="mr-3">
-                                                <span class="badge badge-primary">View More</span>
+                                                <span class="badge badge-primary">{{ __('site.view_more') }}</span>
                                             </a>
                                         </div>
                                     </div>
@@ -154,11 +154,11 @@
                                         <table class="table table-striped mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-left">Complaint #</th>
-                                                    <th>Title</th>
-                                                    <th>Customer</th>
-                                                    <th>Date</th>
-                                                    <th>Status</th>
+                                                    <th class="text-left">{{ __('site.complaint') }}</th>
+                                                    <th>{{ __('site.title') }}</th>
+                                                    <th>{{ __('site.customer') }}</th>
+                                                    <th>{{ __('site.date') }}</th>
+                                                    <th>{{ __('site.status') }}</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -251,10 +251,10 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="card-title">Recent Inquiries</h6>
+                                        <h6 class="card-title">{{ __('site.recent_inquiries') }}</h6>
                                         <div>
                                             <a href="inquiries-queued.php" class="mr-3">
-                                                <span class="badge badge-primary">View More</span>
+                                                <span class="badge badge-primary">{{ __('site.view_more') }}</span>
                                             </a>
                                         </div>
                                     </div>
@@ -262,11 +262,11 @@
                                         <table class="table table-striped mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-left">Inquiry #</th>
-                                                    <th>Title</th>
-                                                    <th>Contact Name</th>
-                                                    <th>Date</th>
-                                                    <th>Status</th>
+                                                    <th class="text-left">{{ __('site.inquiry') }}</th>
+                                                    <th>{{ __('site.title') }}</th>
+                                                    <th>{{ __('site.contact_name') }}</th>
+                                                    <th>{{ __('site.date') }}</th>
+                                                    <th>{{ __('site.status') }}</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -360,4 +360,4 @@
                 </div>
             </div>
         </div>
-        <?php include('includes/inc.footer.php')?>
+        @include('includes/footer')

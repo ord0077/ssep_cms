@@ -6,7 +6,7 @@
             <!-- begin::navigation-logo -->
             <div>
                 <div id="navigation-logo">
-                    <a href="index.php">
+                    <a href="{{ route('dashboard') }}">
                         <img class="logo" src="assets/media/image/logo.png" alt="logo">
                         <img class="logo-light" src="assets/media/image/logo.png" alt="light logo">
                     </a>
@@ -18,8 +18,8 @@
 
                 <div class="open" id="dashboards">
                     <ul class="side_navi">
-                        <li><a class="active" href="index.php">Dashboard</a></li>
-                        <li><a class="" href="customers.php">Customers</a></li>
+                        <li><a class="active" href="{{route('dashboard')}}">Dashboard</a></li>
+                        <li><a class="" href="customers.blade.php">Customers</a></li>
                         <li><a class="" href="add-complain.php">Add Complain</a></li>
                         <li><a class="" href="add-inquiry.php">Add Inquiry</a></li>
                         <br>
