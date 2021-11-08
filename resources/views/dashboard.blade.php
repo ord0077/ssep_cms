@@ -121,7 +121,7 @@
                             <div class="card card-body" onClick="location.href='received-calls.php'" style="cursor:pointer">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div>
-                                        <h6 class="card-title mb-3">{{ __('site.recieved-calls') }}</h6>
+                                        <h6 class="card-title mb-3">{{ __('site.received_calls') }}</h6>
                                         <div class="d-flex d-sm-block d-lg-flex align-items-end">
                                             <h2 class="mb-0 mr-2 font-weight-bold">76</h2>
                                         </div>

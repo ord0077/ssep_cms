@@ -45,7 +45,11 @@ return [
     'recent_inquiries'          =>  'Recent Inquiries',
     'inquiry'                   =>  'Inquiry #',
     'contact_name'              =>  'Contact Name',
-
-
+    'licenses'                  =>  'Licenses',
+    'change_log'                =>  'Change Log',
+    'get_help'                  =>  'Get Help',
+    'orange_room_digital'       =>  'Orange Room Digital',
+    'powered_by'                =>  '© 2021 Powered by',
+    'ssep_agent_dashboard'      =>  'SSEP - Agent Dashboard',
 
 ];

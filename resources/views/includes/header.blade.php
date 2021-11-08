@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>SSEP - Agent Dashboard</title>
+        <title>{{ __('site.ssep_agent_dashboard') }}</title>
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="assets/media/image/favicon.png"/>
@@ -82,4 +82,6 @@
             </div>
 
         </div>
-<!-- end::header -->
+        <!-- end::header -->
+    </div>
+    <!-- end::header -->
