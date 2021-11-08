@@ -51,5 +51,15 @@ return [
     'orange_room_digital'       =>  'Orange Room Digital',
     'powered_by'                =>  '© 2021 Powered by',
     'ssep_agent_dashboard'      =>  'SSEP - Agent Dashboard',
-
+    'customers'                 =>  'Customers',
+    'add_complain'              =>  'Add Complain',
+    'add_inquiry'               =>  'Add Inquiry',
+    'complaints_in_queue'       =>  'Complaints in Queue',
+    'complaints_in_process'     =>  'Complaints in Process',
+    'complaints_resolved'       =>  'Complaints Resolved',
+    'inquiries_in_queue'        =>  'Inquiries in Queue',
+    'inquiries_in_process'      =>  'Inquiries in Process',
+    'inquiries_completed'       =>  'Inquiries Completed',
+    'calls'                     =>  'Calls',
+    'log_out'                   =>  'Log Out',
 ];
