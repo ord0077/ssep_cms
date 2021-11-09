@@ -31,7 +31,11 @@
 
         <!-- begin::header -->
         <div class="header">
-
+            @if(session()->has('message'))
+            <div class="alert alert-success" id="successMessage">
+                {{ session()->get('message') }}
+            </div>
+            @endif
             <div>
                 <ul class="navbar-nav">
                     <li class="nav-item navigation-toggler mobile-toggler">
@@ -85,3 +89,9 @@
         <!-- end::header -->
     </div>
     <!-- end::header -->
+    <script type="text/javascript">
+        setTimeout(function() {
+            $('#successMessage').fadeOut('fast');
+        }, 10000); // <-- time in milliseconds
+
+    </script>
