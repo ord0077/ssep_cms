@@ -56,7 +56,7 @@
 
 
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link" data-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link" data-toggle="dropdown" aria-expanded="false">
                             <figure class="avatar avatar-sm">
                                 <img src="assets/media/image/user/calling-avatar.jpg" class="rounded-circle" alt="avatar">
                             </figure>
