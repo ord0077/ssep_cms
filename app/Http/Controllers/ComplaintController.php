@@ -22,6 +22,12 @@ class ComplaintController extends Controller
     {
         return view('complaints-processing');
     }
+
+    public function resolvedcomplains()
+    {
+        return view('complaints-resolved');
+    }
+
 }
 
 
