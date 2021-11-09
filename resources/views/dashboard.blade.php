@@ -23,7 +23,7 @@
                     <h1>{{ __('site.complaints') }}</h1>
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="card card-body" onClick="location.href='complaints-queued.php'" style="cursor:pointer">
+                            <div class="card card-body" onClick="location.href='{{ route('complaints-queued') }}'" style="cursor:pointer">
                                 <h3 class="mb-3">
                                     32
                                     <small>{{ __('site.new_complaints') }}</small>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card card-body" onClick="location.href='complaints-processing.php'" style="cursor:pointer">
+                            <div class="card card-body" onClick="location.href='{{ route('complaints-processing') }}'" style="cursor:pointer">
                                 <h3 class="mb-3">
                                     70
                                     <small>{{ __('site.complaints_process') }}</small>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card card-body" onClick="location.href='complaints-resolved.php'" style="cursor:pointer">
+                            <div class="card card-body" onClick="location.href='{{ route('complaints-resolved') }}'" style="cursor:pointer">
                                 <h4 class="mb-3">
                                     125
                                     <small>{{ __('site.complaints_resolved') }}</small>
@@ -71,7 +71,7 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-12">
                                             <div class="card bg-primary-bright text-primary">
-                                                <div class="card-body text-center" onClick="location.href='inquiries-completed.php'" style="cursor:pointer">
+                                                <div class="card-body text-center" onClick="location.href='{{ route('inquiries-completed') }}'" style="cursor:pointer">
                                                     <h2 class="font-weight-bold">12</h2>
                                                     <div>{{ __('site.completed') }}</div>
                                                 </div>
@@ -80,7 +80,7 @@
 
                                         <div class="col-lg-4 col-md-12">
                                             <div class="card bg-success-bright text-success">
-                                                <div class="card-body text-center" onClick="location.href='inquiries-processing.php'" style="cursor:pointer">
+                                                <div class="card-body text-center" onClick="location.href='{{ route('inquiries-processing') }}'" style="cursor:pointer">
                                                     <h2 class="font-weight-bold">16</h2>
                                                     <div>{{ __('site.in_process') }}</div>
                                                 </div>
@@ -89,7 +89,7 @@
 
                                         <div class="col-lg-4 col-md-12">
                                             <div class="card bg-danger-bright text-danger">
-                                                <div class="card-body text-center" onClick="location.href='inquiries-queued.php'" style="cursor:pointer">
+                                                <div class="card-body text-center" onClick="location.href='{{ route('inquiries-queued') }}'" style="cursor:pointer">
                                                     <h2 class="font-weight-bold">3</h2>
                                                     <div>{{ __('site.queued') }}</div>
                                                 </div>
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12">
-                            <div class="card card-body" onClick="location.href='missed-calls.php'" style="cursor:pointer">
+                            <div class="card card-body" onClick="location.href='{{ route('missed-calls') }}'" style="cursor:pointer">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <h6 class="card-title mb-3">{{ __('site.missed_calls') }}</h6>
@@ -118,7 +118,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-body" onClick="location.href='received-calls.php'" style="cursor:pointer">
+                            <div class="card card-body" onClick="location.href='{{ route('received-calls') }}'" style="cursor:pointer">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <h6 class="card-title mb-3">{{ __('site.received_calls') }}</h6>
@@ -145,7 +145,7 @@
                                     <div class="d-flex justify-content-between">
                                         <h6 class="card-title">{{ __('site.recent_complaints') }}</h6>
                                         <div>
-                                            <a href="complaints-queued.php" class="mr-3">
+                                            <a href="{{ route('complaints-queued') }}" class="mr-3">
                                                 <span class="badge badge-primary">{{ __('site.view_more') }}</span>
                                             </a>
                                         </div>
@@ -253,7 +253,7 @@
                                     <div class="d-flex justify-content-between">
                                         <h6 class="card-title">{{ __('site.recent_inquiries') }}</h6>
                                         <div>
-                                            <a href="inquiries-queued.php" class="mr-3">
+                                            <a href="{{ route('inquiries-queued') }}" class="mr-3">
                                                 <span class="badge badge-primary">{{ __('site.view_more') }}</span>
                                             </a>
                                         </div>
