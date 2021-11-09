@@ -62,4 +62,8 @@ return [
     'inquiries_completed'       =>  'Inquiries Completed',
     'calls'                     =>  'Calls',
     'log_out'                   =>  'Log Out',
+    'mobile'                    =>  'Mobile',
+    'cnic'                      =>  'CNIC',
+    'postal_address'            =>  'Postal Address',
+    'city_district'             =>  'City / District',
 ];

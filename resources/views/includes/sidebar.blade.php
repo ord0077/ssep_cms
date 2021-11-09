@@ -19,7 +19,7 @@
                 <div class="open" id="dashboards">
                     <ul class="side_navi">
                         <li><a class="active" href="{{route('dashboard')}}">{{ __('site.dashboard') }}</a></li>
-                        <li><a class="" href="customers.blade.php">{{ __('site.customers') }}</a></li>
+                        <li><a class="" href="{{ route('customers') }}">{{ __('site.customers') }}</a></li>
                         <li><a class="" href="add-complain.php">{{ __('site.add_complain') }}</a></li>
                         <li><a class="" href="add-inquiry.php">{{ __('site.add_inquiry') }}</a></li>
                         <br>

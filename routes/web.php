@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -28,3 +29,4 @@ Route::post('custom-registration', [CustomAuthController::class, 'customRegistra
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('customers', [CustomerController::class, 'index'])->name('customers');

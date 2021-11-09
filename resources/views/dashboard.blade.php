@@ -1,6 +1,6 @@
 @include('includes.header')
 <div id="main">
-    @include('includes/sidebar')
+    @include('includes.sidebar')
 
     <!-- begin::main content -->
     <div class="main-content">
