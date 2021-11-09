@@ -10,7 +10,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="#">{{ __('site.add_complain') }}</a>
+                            <a>{{ __('site.add_complain') }}</a>
                         </li>
                     </ol>
                 </nav>
@@ -19,9 +19,11 @@
 
         <div class="container-fluid">
             <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ __('site.register_new_complaint') }}</h1>
+                </div> 
                 <div class="col-md-4">
-                   <h1>{{ __('site.register_new_complaint') }}</h1>
-                   <div class="card">
+                 <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
@@ -47,7 +49,7 @@
 
 <div class="row">
     <div class="col-md-12">
-       <div class="card">
+     <div class="card">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">

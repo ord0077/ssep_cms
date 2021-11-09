@@ -10,7 +10,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="#">{{ __('site.add_inquiry') }}</a>
+                            <a>{{ __('site.add_inquiry') }}</a>
                         </li>
                     </ol>
                 </nav>
