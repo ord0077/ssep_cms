@@ -1,16 +1,16 @@
-<?php include('includes/inc.header.php')?>
+@include('includes.header')
 <div id="main">
-    <?php include('includes/inc.sidebar.php')?>
+    @include('includes.sidebar')
 
     <!-- begin::main content -->
     <div class="main-content">
         <div class="page-header">
             <div class="container-fluid d-sm-flex justify-content-between">
-                <h4>Complaint Management System</h4>
+                <h4>{{ __('site.cms') }}</h4>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="#">Add Complain</a>
+                            <a href="#">{{ __('site.add_complain') }}</a>
                         </li>
                     </ol>
                 </nav>
@@ -20,7 +20,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4">
-                   <h1>Register New Complaint</h1>
+                   <h1>{{ __('site.register_new_complaint') }}</h1>
                    <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -28,14 +28,14 @@
                                 <form class="needs-validation" novalidate autocomplete="off">
                                   <div class="form-row">
                                     <div class="col-md-12 mb-3">
-                                      <label for="validationCustom01">Enter customer CNIC or Phone</label>
-                                      <input type="text" class="form-control" id="validationCustom01" placeholder="CNIC or Phone" value="" required>
+                                      <label for="validationCustom01">{{ __('site.enter_cnic_or_phone') }}</label>
+                                      <input type="text" class="form-control" id="validationCustom01" placeholder="{{ __('site.cnic_or_phone') }}" value="" required>
                                       <div class="valid-feedback">
-                                        Looks good!
+                                        {{ __('site.looks_good') }}
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-primary" type="submit">Get Details</button>
+                            <button class="btn btn-primary" type="submit">{{ __('site.get_details') }}</button>
                         </form>
                     </div>
                 </div>
@@ -51,74 +51,74 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Complaint Form</h1>
+                    <h1>{{ __('site.complaint_form') }}</h1>
                     <form class="needs-validation" novalidate autocomplete="off">
                       <div class="form-row">
                         <div class="col-md-4 mb-3">
-                          <label for="validationCustom01">Name</label>
-                          <input type="text" class="form-control" id="validationCustom01" placeholder="Name" value="" required>
+                          <label for="validationCustom01">{{ __('site.name') }}</label>
+                          <input type="text" class="form-control" id="validationCustom01" placeholder="{{ __('site.name') }}" value="" required>
                           <div class="valid-feedback">
-                            Looks good!
+                            {{ __('site.looks_good') }}
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                      <label for="validationCustom02">Mobile</label>
-                      <input type="number" class="form-control" id="validationCustom02" placeholder="Mobile" value="" required>
+                      <label for="validationCustom02">{{ __('site.mobile') }}</label>
+                      <input type="number" class="form-control" id="validationCustom02" placeholder="{{ __('site.mobile') }}" value="" required>
                       <div class="valid-feedback">
-                        Looks good!
+                        {{ __('site.looks_good') }}
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                  <label for="validationCustom02">CNIC</label>
-                  <input type="number" class="form-control" id="validationCustom02" placeholder="CNIC" value="" required>
+                  <label for="validationCustom02">{{ __('site.cnic') }}</label>
+                  <input type="number" class="form-control" id="validationCustom02" placeholder="{{ __('site.cnic') }}" value="" required>
                   <div class="valid-feedback">
-                    Looks good!
+                    {{ __('site.looks_good') }}
                 </div>
             </div>
         </div>
         <div class="form-row">
             <div class="col-md-8 mb-3">
-              <label for="validationCustom03">Postal Address</label>
-              <input type="text" class="form-control" id="validationCustom03" placeholder="Postal Address" required>
+              <label for="validationCustom03">{{ __('site.postal_address') }}</label>
+              <input type="text" class="form-control" id="validationCustom03" placeholder="{{ __('site.postal_address') }}" required>
               <div class="invalid-feedback">
-                Please provide a valid address.
+                {{ __('site.provide_valid_address') }}
             </div>
         </div>
         <div class="col-md-4 mb-3">
-          <label for="validationCustom03">City</label>
-          <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+          <label for="validationCustom03">{{ __('site.city') }}</label>
+          <input type="text" class="form-control" id="validationCustom03" placeholder="{{ __('site.city') }}" required>
           <div class="invalid-feedback">
-            Please provide a valid city.
+            {{ __('site.provide_valid_city') }}
         </div>
     </div>
     <div class="col-md-12 mb-3">
-      <label for="validationCustom05">Complaint Title</label>
-      <input type="text" class="form-control" id="validationCustom05" placeholder="Complaint Title" required>
+      <label for="validationCustom05">{{ __('site.complaint_title') }}</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="{{ __('site.complaint_title') }}" required>
       <div class="invalid-feedback">
-        Please provide a valid title.
+        {{ __('site.provide_valid_title') }}
     </div>
 </div>
 <div class="col-md-12 mb-3">
-  <label for="exampleFormControlSelect1">Complaint Type</label>
+  <label for="exampleFormControlSelect1">{{ __('site.complaint_type') }}</label>
   <select class="form-control" id="exampleFormControlSelect1">
-    <option>Select</option>
-    <option>Hardware Complaint</option>
-    <option>Power Complaint</option>
-    <option>Other</option>
+    <option>{{ __('site.select') }}</option>
+    <option>{{ __('site.hardware_complaint') }}</option>
+    <option>{{ __('site.power_complaint') }}</option>
+    <option>{{ __('site.other') }}</option>
 </select>
 <div class="invalid-feedback">
-    Please provide a valid title.
+    {{ __('site.provide_valid_title') }}
 </div>
 </div>
 <div class="col-md-12 mb-3">
-  <label for="validationCustom05">Complaint Details</label>
-  <textarea class="form-control" id="validationCustom05" placeholder="Complaint Details" required style="min-height: 200px;"></textarea>
+  <label for="validationCustom05">{{ __('site.complaint_details') }}</label>
+  <textarea class="form-control" id="validationCustom05" placeholder="{{ __('site.complaint_details') }}" required style="min-height: 200px;"></textarea>
   <div class="invalid-feedback">
-    Please provide a valid details.
+    {{ __('site.provide_valid_details') }}
 </div>
 </div>
 </div>
-<button class="btn btn-primary" type="submit">Submit form</button>
+<button class="btn btn-primary" type="submit">{{ __('site.submit_form') }}</button>
 </form>
 </div>
 </div>
@@ -127,7 +127,7 @@
 </div>
 </div>
 </div>
-<?php include('includes/inc.footer.php')?>
+@include('includes.footer')
 <script>
     $(document).ready(function (){
         $('#customers').dataTable( {

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComplaintController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\CustomerController;
@@ -30,3 +31,4 @@ Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('customers', [CustomerController::class, 'index'])->name('customers');
+Route::get('add-complain', [ComplaintController::class, 'complaintform'])->name('add-complain');

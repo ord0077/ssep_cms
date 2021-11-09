@@ -20,7 +20,7 @@
                     <ul class="side_navi">
                         <li><a class="active" href="{{route('dashboard')}}">{{ __('site.dashboard') }}</a></li>
                         <li><a class="" href="{{ route('customers') }}">{{ __('site.customers') }}</a></li>
-                        <li><a class="" href="add-complain.php">{{ __('site.add_complain') }}</a></li>
+                        <li><a class="" href="{{ route('add-complain') }}">{{ __('site.add_complain') }}</a></li>
                         <li><a class="" href="add-inquiry.php">{{ __('site.add_inquiry') }}</a></li>
                         <br>
                         <li class="navigation-divider">{{ __('site.complaints') }}</li>
