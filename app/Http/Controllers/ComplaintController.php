@@ -18,6 +18,10 @@ class ComplaintController extends Controller
         return view('complaints-queued');
     }
 
+    public function processcomplains()
+    {
+        return view('complaints-processing');
+    }
 }
 
 

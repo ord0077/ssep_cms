@@ -92,4 +92,5 @@ return [
     'power_inquiry'             =>  'Power Inquiry',
     'inquiry_details'           =>  'Inquiry Details',
     'time'                      =>  'Time',
+    'complaints_processing'     =>  'Complaints Processing',
 ];
