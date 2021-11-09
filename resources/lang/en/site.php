@@ -85,4 +85,10 @@ return [
     'power_complaint'           =>  'Power Complaint',
     'complaint_details'         =>  'Complaint Details',
     'submit_form'               =>  'Submit form',
+    'submit_new_inquiry'        =>  'Submit New Inquiry',
+    'inquiry_title'             =>  'Inquiry Title',
+    'inquiry_type'              =>  'Inquiry Type',
+    'hardware_inquiry'          =>  'Hardware Inquiry',
+    'power_inquiry'             =>  'Power Inquiry',
+    'inquiry_details'           =>  'Inquiry Details',
 ];
