@@ -91,7 +91,7 @@
             </div>
         </div>
     </div>
-    <button class="btn btn-primary" type="submit">{{ __('site.submit_form') }}}</button>
+    <button class="btn btn-primary" type="submit">{{ __('site.submit_form') }}</button>
 </form>
 </div>
 </div>

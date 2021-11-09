@@ -24,7 +24,7 @@
                         <li><a class="" href="{{ route('add-inquiry') }}">{{ __('site.add_inquiry') }}</a></li>
                         <br>
                         <li class="navigation-divider">{{ __('site.complaints') }}</li>
-                        <li><a class="" href="complaints-queued.php">{{ __('site.complaints_in_queue') }} <span class="badge badge-danger">26</span></a></li>
+                        <li><a class="" href="{{ route('complaints-queued') }}">{{ __('site.complaints_in_queue') }} <span class="badge badge-danger">26</span></a></li>
                         <li><a class="" href="complaints-processing.php">{{ __('site.complaints_in_process') }} <span class="badge badge-warning">38</span></a></li>
                         <li><a class="" href="complaints-resolved.php">{{ __('site.complaints_resolved') }} <span class="badge badge-success">65</span></a></li>
 

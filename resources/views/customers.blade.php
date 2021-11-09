@@ -160,12 +160,12 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Mobile</th>
-                                                <th>CNIC</th>
-                                                <th>Postal Address</th>
-                                                <th>City / District</th>
-                                                <th>Status</th>
+                                                <th>{{ __('site.name') }}</th>
+                                                <th>{{ __('site.mobile') }}</th>
+                                                <th>{{ __('site.cnic') }}</th>
+                                                <th>{{ __('site.postal_address') }}</th>
+                                                <th>{{ __('site.city_district') }}</th>
+                                                <th>{{ __('site.status') }}</th>
                                             </tr>
                                         </tfoot>
                                     </table>

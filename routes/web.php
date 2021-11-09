@@ -32,5 +32,8 @@ Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('customers', [CustomerController::class, 'index'])->name('customers');
+
 Route::get('add-complain', [ComplaintController::class, 'complaintform'])->name('add-complain');
+Route::get('complaints-queued', [ComplaintController::class, 'queuecomplains'])->name('complaints-queued');
+
 Route::get('add-inquiry', [InquiryController::class, 'inquiryform'])->name('add-inquiry');

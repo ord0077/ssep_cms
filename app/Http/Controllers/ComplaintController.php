@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 class ComplaintController extends Controller
 {
 
-    public function index()
-    {
-        return view('dashboard');
-    }
-
     public function complaintform()
     {
         return view('add-complain');
+    }
+
+    public function queuecomplains()
+    {
+        return view('complaints-queued');
     }
 
 }
