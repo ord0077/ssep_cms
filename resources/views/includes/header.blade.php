@@ -63,7 +63,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" data-toggle="tooltip" data-placement="right" title="Logout">
+                        <a href="{{ route('signout') }}" data-toggle="tooltip" data-placement="right" title="Logout">
                             <i data-feather="log-out"></i>
                         </a>
                     </li>

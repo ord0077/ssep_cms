@@ -37,7 +37,7 @@
                         <li><a class="" href="{{ route('missed-calls') }}">{{ __('site.missed_calls') }} <span class="badge badge-danger">25</span></a></li>
                         <li><a class="" href="{{ route('received-calls') }}">{{ __('site.received_calls') }} <span class="badge badge-success">76</span></a></li>
                         <br>
-                        <li><a class="" href="#"><i data-feather="log-out"></i> &nbsp;{{ __('site.log_out') }}</a></li>
+                        <li><a class="" href="{{ route('signout') }}"><i data-feather="log-out"></i> &nbsp;{{ __('site.log_out') }}</a></li>
                     </ul>
                 </div>
             </div>
