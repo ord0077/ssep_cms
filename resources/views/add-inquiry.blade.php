@@ -10,7 +10,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="#">Add Inquiry</a>
+                            <a>Add Inquiry</a>
                         </li>
                     </ol>
                 </nav>
