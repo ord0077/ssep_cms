@@ -96,4 +96,5 @@ return [
     'complaints_processing'     =>  'Complaints Processing',
     'complaints_resolved'       =>  'Complaints Resolved',
     'inquiries_processing'      =>  'Inquiries Processing',
+    'call_id'                   =>  'Call ID',
 ];

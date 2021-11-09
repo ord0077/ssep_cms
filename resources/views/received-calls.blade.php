@@ -1,16 +1,16 @@
-<?php include('includes/inc.header.php')?>
+@include('includes.header')
 <div id="main">
-    <?php include('includes/inc.sidebar.php')?>
+    @include('includes.sidebar')
 
     <!-- begin::main content -->
     <div class="main-content">
         <div class="page-header">
             <div class="container-fluid d-sm-flex justify-content-between">
-                <h4>Complaint Management System</h4>
+                <h4>{{ __('site.cms') }}</h4>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a>Received Calls</a>
+                            <a>{{ __('site.received_calls') }}</a>
                         </li>
                     </ol>
                 </nav>
@@ -20,7 +20,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Received Calls</h1>
+                    <h1>{{ __('site.received_calls') }}</h1>
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
@@ -28,11 +28,10 @@
                                     <table id="customers" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Call ID</th>
-                                                <th>Phone Number</th>
-                                                <th>Date</th>
-                                                <th>Time</th>
-                                                <th>Action</th>
+                                                <th>{{ __('site.call_id') }}</th>
+                                                <th>{{ __('site.mobile') }}</th>
+                                                <th>{{ __('site.date') }}</th>
+                                                <th>{{ __('site.time') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -41,9 +40,6 @@
                                                 <td>03362051663</td>
                                                 <td>02 October 2021</td>
                                                 <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Action</span>
-                                                </td>
                                             </tr>
 
                                             <tr>
@@ -51,9 +47,6 @@
                                                 <td>03362051663</td>
                                                 <td>02 October 2021</td>
                                                 <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Action</span>
-                                                </td>
                                             </tr>
 
                                             <tr>
@@ -61,9 +54,6 @@
                                                 <td>03362051663</td>
                                                 <td>02 October 2021</td>
                                                 <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Action</span>
-                                                </td>
                                             </tr>
 
                                             <tr>
@@ -71,9 +61,6 @@
                                                 <td>03362051663</td>
                                                 <td>02 October 2021</td>
                                                 <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Action</span>
-                                                </td>
                                             </tr>
 
                                             <tr>
@@ -81,9 +68,6 @@
                                                 <td>03362051663</td>
                                                 <td>02 October 2021</td>
                                                 <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Action</span>
-                                                </td>
                                             </tr>
 
                                             <tr>
@@ -91,9 +75,6 @@
                                                 <td>03362051663</td>
                                                 <td>02 October 2021</td>
                                                 <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Action</span>
-                                                </td>
                                             </tr>
 
                                             <tr>
@@ -101,9 +82,6 @@
                                                 <td>03362051663</td>
                                                 <td>02 October 2021</td>
                                                 <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Action</span>
-                                                </td>
                                             </tr>
 
                                             <tr>
@@ -111,9 +89,6 @@
                                                 <td>03362051663</td>
                                                 <td>02 October 2021</td>
                                                 <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Action</span>
-                                                </td>
                                             </tr>
 
                                             <tr>
@@ -121,9 +96,6 @@
                                                 <td>03362051663</td>
                                                 <td>02 October 2021</td>
                                                 <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Action</span>
-                                                </td>
                                             </tr>
 
                                             <tr>
@@ -131,19 +103,15 @@
                                                 <td>03362051663</td>
                                                 <td>02 October 2021</td>
                                                 <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Action</span>
-                                                </td>
                                             </tr>
 
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Call ID</th>
-                                                <th>Phone Number</th>
-                                                <th>Date</th>
-                                                <th>Time</th>
-                                                <th>Action</th>
+                                                <th>{{ __('site.call_id') }}</th>
+                                                <th>{{ __('site.mobile') }}</th>
+                                                <th>{{ __('site.date') }}</th>
+                                                <th>{{ __('site.time') }}</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -154,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <?php include('includes/inc.footer.php')?>
+        @include('includes.footer')
         <script>
             $(document).ready(function (){
                 $('#customers').dataTable( {

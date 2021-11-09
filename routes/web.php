@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CallController;
 use App\Http\Controllers\ComplaintController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
@@ -42,3 +43,7 @@ Route::get('add-inquiry', [InquiryController::class, 'inquiryform'])->name('add-
 Route::get('inquiries-queued', [InquiryController::class, 'queueinquiries'])->name('inquiries-queued');
 Route::get('inquiries-processing', [InquiryController::class, 'processinquiries'])->name('inquiries-processing');
 Route::get('inquiries-completed', [InquiryController::class, 'completedinquiries'])->name('inquiries-completed');
+
+Route::get('missed-calls', [CallController::class, 'missedcalls'])->name('missed-calls');
+Route::get('received-calls', [CallController::class, 'recievedcalls'])->name('received-calls');
+

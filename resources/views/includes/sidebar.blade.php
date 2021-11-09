@@ -34,8 +34,8 @@
                         <li><a class="" href="{{ route('inquiries-completed') }}">{{ __('site.inquiries_completed') }} <span class="badge badge-success">20</span></a></li>
 
                         <li class="navigation-divider">{{ __('site.calls') }}</li>
-                        <li><a class="" href="missed-calls.php">{{ __('site.missed_calls') }} <span class="badge badge-danger">25</span></a></li>
-                        <li><a class="" href="received-calls.php">{{ __('site.received_calls') }} <span class="badge badge-success">76</span></a></li>
+                        <li><a class="" href="{{ route('missed-calls') }}">{{ __('site.missed_calls') }} <span class="badge badge-danger">25</span></a></li>
+                        <li><a class="" href="{{ route('received-calls') }}">{{ __('site.received_calls') }} <span class="badge badge-success">76</span></a></li>
                         <br>
                         <li><a class="" href="#"><i data-feather="log-out"></i> &nbsp;{{ __('site.log_out') }}</a></li>
                     </ul>
