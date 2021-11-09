@@ -39,3 +39,6 @@ Route::get('complaints-processing', [ComplaintController::class, 'processcomplai
 Route::get('complaints-resolved', [ComplaintController::class, 'resolvedcomplains'])->name('complaints-resolved');
 
 Route::get('add-inquiry', [InquiryController::class, 'inquiryform'])->name('add-inquiry');
+Route::get('inquiries-queued', [InquiryController::class, 'queueinquiries'])->name('inquiries-queued');
+Route::get('inquiries-processing', [InquiryController::class, 'processinquiries'])->name('inquiries-processing');
+Route::get('inquiries-completed', [InquiryController::class, 'completedinquiries'])->name('inquiries-completed');

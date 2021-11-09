@@ -29,9 +29,9 @@
                         <li><a class="" href="{{ route('complaints-resolved') }}">{{ __('site.complaints_resolved') }} <span class="badge badge-success">65</span></a></li>
 
                         <li class="navigation-divider">{{ __('site.inquiries') }}</li>
-                        <li><a class="" href="inquiries-queued.php">{{ __('site.inquiries_in_queue') }} <span class="badge badge-danger">12</span></a></li>
-                        <li><a class="" href="inquiries-processing.php">{{ __('site.inquiries_in_process') }} <span class="badge badge-warning">5</span></a></li>
-                        <li><a class="" href="inquiries-completed.php">{{ __('site.inquiries_completed') }} <span class="badge badge-success">20</span></a></li>
+                        <li><a class="" href="{{ route('inquiries-queued') }}">{{ __('site.inquiries_in_queue') }} <span class="badge badge-danger">12</span></a></li>
+                        <li><a class="" href="{{ route('inquiries-processing') }}">{{ __('site.inquiries_in_process') }} <span class="badge badge-warning">5</span></a></li>
+                        <li><a class="" href="{{ route('inquiries-completed') }}">{{ __('site.inquiries_completed') }} <span class="badge badge-success">20</span></a></li>
 
                         <li class="navigation-divider">{{ __('site.calls') }}</li>
                         <li><a class="" href="missed-calls.php">{{ __('site.missed_calls') }} <span class="badge badge-danger">25</span></a></li>

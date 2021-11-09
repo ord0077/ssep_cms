@@ -38,6 +38,7 @@ return [
     'recent_complaints'         =>  'Recent Complaints',
     'view_more'                 =>  'View More',
     'complaint'                 =>  'Complaint #',
+    'inquiriess'                =>  'Inquiries #',
     'title'                     =>  'Title',
     'customer'                  =>  'Customer',
     'date'                      =>  'Date',
@@ -94,4 +95,5 @@ return [
     'time'                      =>  'Time',
     'complaints_processing'     =>  'Complaints Processing',
     'complaints_resolved'       =>  'Complaints Resolved',
+    'inquiries_processing'      =>  'Inquiries Processing',
 ];
