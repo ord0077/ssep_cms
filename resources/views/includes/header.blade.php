@@ -103,7 +103,7 @@
     <!-- end::header -->
     <script type="text/javascript">
         setTimeout(function() {
-            $('#successMessage').fadeOut('fast');
-        }, 8000000); // <-- time in milliseconds
+            $('#successMessage').slideUp('fast');
+        }, 3000); // <-- time in milliseconds
 
     </script>
