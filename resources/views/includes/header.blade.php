@@ -7,19 +7,19 @@
         <title>{{ __('site.ssep_agent_dashboard') }}</title>
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="assets/media/image/favicon.png"/>
+        <link rel="shortcut icon" href="{{ asset('assets/media/image/favicon.png') }}"/>
 
         <!-- Plugin styles -->
-        <link rel="stylesheet" href="vendors/bundle.css" type="text/css">
+        <link rel="stylesheet" href="{{ asset('vendors/bundle.css')}}" type="text/css">
 
         <!-- App styles -->
-        <link rel="stylesheet" href="assets/css/app.min.css" type="text/css">
+        <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}" type="text/css">
 
         <!-- DataTable -->
-        <link rel="stylesheet" href="vendors/dataTable/dataTables.min.css" type="text/css">
+        <link rel="stylesheet" href="{{ asset('vendors/dataTable/dataTables.min.css') }}" type="text/css">
 
         <!-- Prism -->
-        <link rel="stylesheet" href="vendors/prism/prism.css" type="text/css">
+        <link rel="stylesheet" href="{{ asset('vendors/prism/prism.css') }}" type="text/css">
     </head>
     <style type="text/css">
         #toast-container{
@@ -74,7 +74,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" aria-expanded="false">
                             <figure class="avatar avatar-sm">
-                                <img src="assets/media/image/user/calling-avatar.jpg" class="rounded-circle" alt="avatar">
+                                <img src="{{ asset('assets/media/image/user/calling-avatar.jpg') }}" class="rounded-circle" alt="avatar">
                             </figure>
                         </a>
                     </li>

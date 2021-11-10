@@ -7,8 +7,8 @@
             <div>
                 <div id="navigation-logo">
                     <a href="{{ route('dashboard') }}">
-                        <img class="logo" src="assets/media/image/logo.png" alt="logo">
-                        <img class="logo-light" src="assets/media/image/logo.png" alt="light logo">
+                        <img class="logo" src="{{ asset('assets/media/image/logo.png') }}" alt="logo">
+                        <img class="logo-light" src="{{ asset('assets/media/image/logo.png') }}" alt="light logo">
                     </a>
                 </div>
             </div>

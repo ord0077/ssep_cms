@@ -12,16 +12,16 @@
 </div>
 
 <!-- Plugin scripts -->
-<script src="vendors/bundle.js"></script>
+<script src="{{ asset('vendors/bundle.js') }}"></script>
 
 <!-- Chartjs -->
-<script src="vendors/charts/chartjs/chart.min.js"></script>
+<script src="{{ asset('vendors/charts/chartjs/chart.min.js') }}"></script>
 
 <!-- Circle progress -->
-<script src="vendors/circle-progress/circle-progress.min.js"></script>
+<script src="{{ asset('vendors/circle-progress/circle-progress.min.js') }}"></script>
 
 <!-- Dashboard scripts -->
-<script src="assets/js/examples/dashboard.js"></script>
+<script src="{{ asset('assets/js/examples/dashboard.js') }}"></script>
 <div class="colors"> <!-- To use theme colors with Javascript -->
     <div class="bg-primary"></div>
     <div class="bg-primary-bright"></div>
@@ -38,19 +38,19 @@
 </div>
 
 <!-- Plugin scripts -->
-<script src="vendors/bundle.js"></script>
+<script src="{{ asset('vendors/bundle.js') }}"></script>
 
 <!-- App scripts -->
-<script src="assets/js/app.min.js"></script>
+<script src="{{ asset('assets/js/app.min.js') }}"></script>
 
 <!-- DataTable -->
-<script src="vendors/dataTable/jquery.dataTables.min.js"></script>
-<script src="vendors/dataTable/dataTables.bootstrap4.min.js"></script>
-<script src="vendors/dataTable/dataTables.responsive.min.js"></script>
-<script src="assets/js/examples/datatable.js"></script>
+<script src="{{ asset('vendors/dataTable/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('vendors/dataTable/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('vendors/dataTable/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('assets/js/examples/datatable.js') }}"></script>
 
 <!-- Prism -->
-<script src="vendors/prism/prism.js"></script>
+<script src="{{ asset('vendors/prism/prism.js') }}"></script>
 
 <!-- Active Nav -->
 <script>
