@@ -103,4 +103,6 @@ return [
     'view'                      =>  'View',
     'action'                    =>  'Action',
     'inquiry_detail'            =>  'Inquiry Detail',
+    'change_status'             =>  'Change Status',
+    'move_to_process'           =>  'Move to Process',
 ];
