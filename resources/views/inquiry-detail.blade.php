@@ -26,41 +26,41 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <dl class="row">
-                                      <dt class="col-sm-2">{{ __('site.inquiriess') }}</dt>
-                                      <dd class="col-sm-10">#  {{ $inquirydetail->id }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.inquiriess') }}</dt>
+                                      <dd class="col-sm-9">#  {{ $inquirydetail->id }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.customer') }}</dt>
-                                      <dd class="col-sm-10">{{ $inquirydetail->name }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.customer') }}</dt>
+                                      <dd class="col-sm-9">{{ $inquirydetail->name }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.mobile') }}</dt>
-                                      <dd class="col-sm-10">{{ $inquirydetail->mobile }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.mobile') }}</dt>
+                                      <dd class="col-sm-9">{{ $inquirydetail->mobile }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.cnic') }}</dt>
-                                      <dd class="col-sm-10">{{ $inquirydetail->cnic }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.cnic') }}</dt>
+                                      <dd class="col-sm-9">{{ $inquirydetail->cnic }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.postal_address') }}</dt>
-                                      <dd class="col-sm-10">{{ $inquirydetail->postal_address }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.postal_address') }}</dt>
+                                      <dd class="col-sm-9">{{ $inquirydetail->postal_address }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.city') }}</dt>
-                                      <dd class="col-sm-10">{{ $inquirydetail->city }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.city') }}</dt>
+                                      <dd class="col-sm-9">{{ $inquirydetail->city }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.inquiry_title') }}</dt>
-                                      <dd class="col-sm-10">{{ $inquirydetail->title }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.inquiry_title') }}</dt>
+                                      <dd class="col-sm-9">{{ $inquirydetail->title }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.type') }}</dt>
-                                      <dd class="col-sm-10">{{ $inquirydetail->type }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.type') }}</dt>
+                                      <dd class="col-sm-9">{{ $inquirydetail->type }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.inquiry_details') }}</dt>
-                                      <dd class="col-sm-10">{{ $inquirydetail->details }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.inquiry_details') }}</dt>
+                                      <dd class="col-sm-9">{{ $inquirydetail->details }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.date') }}</dt>
-                                      <dd class="col-sm-10">{{ ($inquirydetail->created_at->format('d M Y')) }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.date') }}</dt>
+                                      <dd class="col-sm-9">{{ ($inquirydetail->created_at->format('d M Y')) }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.time') }}</dt>
-                                      <dd class="col-sm-10">{{ ($inquirydetail->created_at->format('h:i:s')) }}</dd>
+                                      <dt class="col-sm-3">{{ __('site.time') }}</dt>
+                                      <dd class="col-sm-9">{{ ($inquirydetail->created_at->format('h:i:s')) }}</dd>
 
-                                      <dt class="col-sm-2">{{ __('site.status') }}</dt>
-                                      <dd class="col-sm-10"><span class="badge badge-danger">{{ __('site.queued') }}</span></dd>
+                                      <dt class="col-sm-3">{{ __('site.status') }}</dt>
+                                      <dd class="col-sm-9"><span class="badge badge-danger">{{ __('site.queued') }}</span></dd>
                                   </dl>
                               </div>
                           </div>
