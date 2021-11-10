@@ -2,13 +2,6 @@
 <footer>
     <div class="container-fluid">
         <div>{{ __('site.powered_by') }} <a href="https://orangeroomdigital.com/">{{ __('site.orange_room_digital') }}</a></div>
-        <div>
-            <nav class="nav">
-                <a href="#" class="nav-link">{{ __('site.licenses') }}</a>
-                <a href="#" class="nav-link">{{ __('site.change_log') }}</a>
-                <a href="#" class="nav-link">{{ __('site.get_help') }}</a>
-            </nav>
-        </div>
     </div>
 </footer>
 <!-- end::footer -->

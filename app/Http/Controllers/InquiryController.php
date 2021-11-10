@@ -16,6 +16,17 @@ class InquiryController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate(request(),[
+            'name'  => 'required',
+            'mobile'  => 'required',
+            'cnic'  => 'required',
+            'postal_address'  => 'required',
+            'city'  => 'required',
+            'title'  => 'required',
+            'type'  => 'required',
+            'details'  => 'required',
+            ]);
+
         $inquiry = new Inquiry;
         $inquiry->name      =   $request['name'];
         $inquiry->mobile    =   $request['mobile'];
@@ -29,13 +40,14 @@ class InquiryController extends Controller
 
         $inquiry->save();
 
-        return redirect()->route('inquiries-queued')->with('message', 'IT WORKS!');
+        return redirect()->route('inquiries-queued')->with('message', __('site.inquiry_submit'));
 
     }
 
     public function queueinquiries()
     {
-        return view('inquiries-queued');
+        $inquiry = Inquiry::where('status' , 'queued')->get();
+        return view('inquiries-queued', compact('inquiry'));
     }
 
     public function processinquiries()
