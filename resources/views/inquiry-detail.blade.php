@@ -75,7 +75,10 @@
                             <div class="col-md-12">
                                 <div>
                                     <h3>{{ __('site.change_status') }}</h3>
-                                    <button type="button" class="btn btn-outline-warning">{{ __('site.move_to_process') }} &nbsp; <i class="fa fa-arrow-circle-right" style="font-size: 20px;"></i></button>
+                                    <form class="needs-validation" method="POST" action="{{ route('updatestatus', $inquirydetail->id) }}" novalidate autocomplete="off">
+                                     {{csrf_field()}}
+                                    <button type="submit" class="btn btn-outline-warning">{{ __('site.move_to_process') }} &nbsp; <i class="fa fa-arrow-circle-right" style="font-size: 20px;"></i></button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

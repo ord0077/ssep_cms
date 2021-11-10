@@ -105,4 +105,5 @@ return [
     'inquiry_detail'            =>  'Inquiry Detail',
     'change_status'             =>  'Change Status',
     'move_to_process'           =>  'Move to Process',
+    'success_move_to_process'   =>  'Inquiry move to process successfully'
 ];
