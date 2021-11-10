@@ -21,6 +21,16 @@
         <!-- Prism -->
         <link rel="stylesheet" href="vendors/prism/prism.css" type="text/css">
     </head>
+    <style type="text/css">
+        #toast-container{
+            left: 50%;
+        }
+
+        #toast-container>div{
+            min-width: 300px;
+            width: auto;
+        }
+    </style>
     <body>
 
         <!-- begin::preloader-->
@@ -32,8 +42,10 @@
         <!-- begin::header -->
         <div class="header">
             @if(session()->has('message'))
-            <div class="alert alert-success" id="successMessage">
-                {{ session()->get('message') }}
+            <div id="toast-container">
+                <div class="toast toast-success toast-top-center toast-title" id="successMessage">
+                    {{ session()->get('message') }}
+                </div>
             </div>
             @endif
             <div>
@@ -92,6 +104,6 @@
     <script type="text/javascript">
         setTimeout(function() {
             $('#successMessage').fadeOut('fast');
-        }, 10000); // <-- time in milliseconds
+        }, 8000000); // <-- time in milliseconds
 
     </script>
