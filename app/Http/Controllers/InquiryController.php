@@ -29,13 +29,14 @@ class InquiryController extends Controller
 
         $inquiry->save();
 
-        return redirect()->route('inquiries-queued')->with('message', 'IT WORKS!');
+        return redirect()->route('inquiries-queued')->with('message', __('site.inquiry_submit'));
 
     }
 
     public function queueinquiries()
     {
-        return view('inquiries-queued');
+        $inquiry = Inquiry::where('status' , 'queued')->get();
+        return view('inquiries-queued', compact('inquiry'));
     }
 
     public function processinquiries()

@@ -97,4 +97,7 @@ return [
     'complaints_resolved'       =>  'Complaints Resolved',
     'inquiries_processing'      =>  'Inquiries Processing',
     'call_id'                   =>  'Call ID',
+    'type'                      =>  'Type',
+    'inq_no'                    =>  'Inq No',
+    'inquiry_submit'            =>  'Inquiry Submited Successfully'
 ];
