@@ -16266,7 +16266,7 @@ body.semi-dark:not(.dark) .navigation .avatar:before {
 
 #main .main-content {
 	padding: 1.875rem;
-	padding-left: 320px;
+	padding-left: 280px;
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	-moz-box-flex: 1;
@@ -16758,7 +16758,7 @@ small {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	height: 70px;
-	margin-left: 300px;
+	margin-left: 260px;
 	border-bottom: 1px solid #ebebeb;
 	padding: 0 1.8rem
 }
@@ -16970,7 +16970,7 @@ small {
 .navigation {
 	background: #fff;
 	z-index: 4;
-	width: 300px;
+	width: 260px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -17475,7 +17475,7 @@ footer .nav a:hover {
 	opacity: 0;
 	top: 0;
 	bottom: 0;
-	width: 300px;
+	width: 260px;
 	background: #fff;
 	z-index: 1000;
 	-webkit-transition: all .2s;
