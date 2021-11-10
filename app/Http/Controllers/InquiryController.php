@@ -44,6 +44,12 @@ class InquiryController extends Controller
 
     }
 
+    public function detail()
+    {
+        return view('inquiry-detail');
+    }
+
+
     public function queueinquiries()
     {
         $inquiry = Inquiry::where('status' , 'queued')->get();

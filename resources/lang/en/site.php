@@ -99,5 +99,6 @@ return [
     'call_id'                   =>  'Call ID',
     'type'                      =>  'Type',
     'inq_no'                    =>  'Inq No',
-    'inquiry_submit'            =>  'Inquiry Submited Successfully'
+    'inquiry_submit'            =>  'Inquiry Submited Successfully',
+    'view'                      =>  'View',
 ];

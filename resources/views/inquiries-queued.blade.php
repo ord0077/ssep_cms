@@ -57,7 +57,7 @@
                                                     <span class="badge badge-danger">{{ __('site.queued') }}</span>
                                                 </td>
                                                 <td>
-                                                    <a href="#"><span class="badge badge-primary"><i class="fa fa-eye"></i> view</span></a>
+                                                    <a href="{{ route('inquiry-detail') }}"><span class="badge badge-primary"><i class="fa fa-eye"></i> {{ __('site.view') }}</span></a>
                                                 </td>
                                             </tr>
                                             @endforeach
