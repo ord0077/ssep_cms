@@ -16,6 +16,17 @@ class InquiryController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate(request(),[
+            'name'  => 'required',
+            'mobile'  => 'required',
+            'cnic'  => 'required',
+            'postal_address'  => 'required',
+            'city'  => 'required',
+            'title'  => 'required',
+            'type'  => 'required',
+            'details'  => 'required',
+            ]);
+
         $inquiry = new Inquiry;
         $inquiry->name      =   $request['name'];
         $inquiry->mobile    =   $request['mobile'];
