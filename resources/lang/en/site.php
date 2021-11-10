@@ -102,4 +102,5 @@ return [
     'inquiry_submit'            =>  'Inquiry Submited Successfully',
     'view'                      =>  'View',
     'action'                    =>  'Action',
+    'inquiry_detail'            =>  'Inquiry Detail',
 ];

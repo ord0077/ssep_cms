@@ -10,7 +10,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a>Inquiry Detail</a>
+                            <a>{{ __('site.inquiry_detail') }}}</a>
                         </li>
                     </ol>
                 </nav>
@@ -18,7 +18,7 @@
         </div>
         {{-- @dd($inquiry) --}}
         <div class="container-fluid">
-            <h1>Inquiry Detail</h1>
+            <h1>{{ __('site.inquiry_detail') }}</h1>
             <div class="row">
                 <div class="col-md-8">
                     <div class="card">
@@ -26,41 +26,41 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <dl class="row">
-                                      <dt class="col-sm-2">Inquiry #</dt>
-                                      <dd class="col-sm-10">#1</dd>
+                                      <dt class="col-sm-2">{{ __('site.inquiriess') }}</dt>
+                                      <dd class="col-sm-10">#  {{ $inquirydetail->id }}</dd>
 
-                                      <dt class="col-sm-2">Customer</dt>
-                                      <dd class="col-sm-10">Summer Stevenson</dd>
+                                      <dt class="col-sm-2">{{ __('site.customer') }}</dt>
+                                      <dd class="col-sm-10">{{ $inquirydetail->name }}</dd>
 
-                                      <dt class="col-sm-2">Mobile</dt>
-                                      <dd class="col-sm-10">03000000000</dd>
+                                      <dt class="col-sm-2">{{ __('site.mobile') }}</dt>
+                                      <dd class="col-sm-10">{{ $inquirydetail->mobile }}</dd>
 
-                                      <dt class="col-sm-2">CNIC</dt>
-                                      <dd class="col-sm-10">42521-7458745-7</dd>
+                                      <dt class="col-sm-2">{{ __('site.cnic') }}</dt>
+                                      <dd class="col-sm-10">{{ $inquirydetail->cnic }}</dd>
 
-                                      <dt class="col-sm-2">Postal Address</dt>
-                                      <dd class="col-sm-10">ABC Street Karachi</dd>
+                                      <dt class="col-sm-2">{{ __('site.postal_address') }}</dt>
+                                      <dd class="col-sm-10">{{ $inquirydetail->postal_address }}</dd>
 
-                                      <dt class="col-sm-2">City</dt>
-                                      <dd class="col-sm-10">Karachi</dd>
+                                      <dt class="col-sm-2">{{ __('site.city') }}</dt>
+                                      <dd class="col-sm-10">{{ $inquirydetail->city }}</dd>
 
-                                      <dt class="col-sm-2">Inquiry Title</dt>
-                                      <dd class="col-sm-10">Veniam maxime iure</dd>
+                                      <dt class="col-sm-2">{{ __('site.inquiry_title') }}</dt>
+                                      <dd class="col-sm-10">{{ $inquirydetail->title }}</dd>
 
-                                      <dt class="col-sm-2">Type</dt>
-                                      <dd class="col-sm-10">Hardware Information</dd>
+                                      <dt class="col-sm-2">{{ __('site.type') }}</dt>
+                                      <dd class="col-sm-10">{{ $inquirydetail->type }}</dd>
 
-                                      <dt class="col-sm-2">Inquiry Details</dt>
-                                      <dd class="col-sm-10">Get quotation for a solar powered office.</dd>
+                                      <dt class="col-sm-2">{{ __('site.inquiry_details') }}</dt>
+                                      <dd class="col-sm-10">{{ $inquirydetail->details }}</dd>
 
-                                      <dt class="col-sm-2">Date</dt>
-                                      <dd class="col-sm-10">02 Nov 2021</dd>
+                                      <dt class="col-sm-2">{{ __('site.date') }}</dt>
+                                      <dd class="col-sm-10">{{ ($inquirydetail->created_at->format('d M Y')) }}</dd>
 
-                                      <dt class="col-sm-2">Time</dt>
-                                      <dd class="col-sm-10">09:20 pm</dd>
+                                      <dt class="col-sm-2">{{ __('site.time') }}</dt>
+                                      <dd class="col-sm-10">{{ ($inquirydetail->created_at->format('h:i:s')) }}</dd>
 
-                                      <dt class="col-sm-2">Status</dt>
-                                      <dd class="col-sm-10"><span class="badge badge-danger">queued</span></dd>
+                                      <dt class="col-sm-2">{{ __('site.status') }}</dt>
+                                      <dd class="col-sm-10"><span class="badge badge-danger">{{ __('site.queued') }}</span></dd>
                                   </dl>
                               </div>
                           </div>

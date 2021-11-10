@@ -46,8 +46,8 @@ class InquiryController extends Controller
 
     public function detail(Request $request ,$id)
     {
-        $inquiryDetail = Inquiry::where('id' , $id)->first();
-        return view('inquiry-detail', compact('inquiryDetail'));
+        $inquirydetail = Inquiry::where('id' , $id)->first();
+        return view('inquiry-detail', compact('inquirydetail'));
     }
 
 
