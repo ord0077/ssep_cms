@@ -38,7 +38,7 @@
                                                 <th>{{ __('site.date') }}</th>
                                                 <th>{{ __('site.time') }}</th>
                                                 <th>{{ __('site.status') }}</th>
-                                                <th>Action</th>
+                                                <th>{{ __('site.action') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -57,7 +57,7 @@
                                                     <span class="badge badge-danger">{{ __('site.queued') }}</span>
                                                 </td>
                                                 <td>
-                                                    <a href="{{ route('inquiry-detail') }}"><span class="badge badge-primary"><i class="fa fa-eye"></i> {{ __('site.view') }}</span></a>
+                                                    <a href="{{ route('inquiry-detail', $inquiry->id) }}"><span class="badge badge-primary"><i class="fa fa-eye"></i> {{ __('site.view') }}</span></a>
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -74,7 +74,7 @@
                                                 <th>{{ __('site.date') }}</th>
                                                 <th>{{ __('site.time') }}</th>
                                                 <th>{{ __('site.status') }}</th>
-                                                <th>Action</th>
+                                                <th>{{ __('site.action') }}</th>
                                             </tr>
                                         </tfoot>
                                     </table>

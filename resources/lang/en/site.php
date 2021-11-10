@@ -101,4 +101,5 @@ return [
     'inq_no'                    =>  'Inq No',
     'inquiry_submit'            =>  'Inquiry Submited Successfully',
     'view'                      =>  'View',
+    'action'                    =>  'Action',
 ];
