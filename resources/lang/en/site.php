@@ -108,6 +108,7 @@ return [
     'move_to_complete'          =>  'Move to Complete',
     'success_move_to_process'   =>  'Inquiry move to process successfully',
     'success_move_to_complete'  =>  'Inquiry move to complete successfully',
+    'inquiry_deleted'           =>  'Inquiry deleted successfully',
     'processing'                =>  'Processing',
     'resolved'                  =>  'Resolved',
 ];

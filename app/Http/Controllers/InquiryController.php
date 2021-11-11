@@ -65,6 +65,13 @@ class InquiryController extends Controller
         return redirect()->route('inquiries-processing')->with('message', __('site.success_move_to_complete'));
     }
 
+    public function delete($id)
+    {
+        $inquirydetail = inquiry::where('id' , '=' , $id)->delete();
+
+        return redirect()->route('inquiries-queued')->with('message', __('site.inquiry_deleted'));
+    }
+
     public function queueinquiries()
     {
         $inquiry = Inquiry::where('status' , 'queued')->get();
