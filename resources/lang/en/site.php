@@ -111,4 +111,5 @@ return [
     'inquiry_deleted'           =>  'Inquiry deleted successfully',
     'processing'                =>  'Processing',
     'resolved'                  =>  'Resolved',
+    'edit_inquiry'              =>  'Edit Inquiry',
 ];

@@ -44,6 +44,12 @@ class InquiryController extends Controller
 
     }
 
+    public function editqueueinquiry()
+    {
+        return view('edit-inquiry');
+    }
+
+
     public function detail(Request $request ,$id)
     {
         $inquirydetail = Inquiry::where('id' , $id)->first();
