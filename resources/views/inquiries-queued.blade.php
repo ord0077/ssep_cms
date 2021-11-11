@@ -57,7 +57,11 @@
                                                     <span class="badge badge-danger">{{ __('site.queued') }}</span>
                                                 </td>
                                                 <td>
-                                                    <a href="{{ route('inquiry-detail', $inquiry->id) }}"><span class="badge badge-primary"><i class="fa fa-eye"></i> {{ __('site.view') }}</span></a>
+                                                    <a href="{{ route('inquiry-detail', $inquiry->id) }}"><span class="badge badge-primary"><i class="fa fa-eye" style="font-size:14px"></i></span></a>
+
+                                                    <a href="{{ route('inquiry-detail', $inquiry->id) }}"><span class="badge badge-info"><i class="fa fa-pencil" style="font-size:14px"></i></span></a>
+
+                                                    <a href="{{ route('inquiry-detail', $inquiry->id) }}"><span class="badge badge-danger"><i class="fa fa-trash" style="font-size:14px"></i></span></a>
                                                 </td>
                                             </tr>
                                             @endforeach
