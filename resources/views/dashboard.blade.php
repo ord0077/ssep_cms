@@ -72,7 +72,7 @@
                                         <div class="col-lg-4 col-md-12">
                                             <div class="card bg-primary-bright text-primary">
                                                 <div class="card-body text-center" onClick="location.href='{{ route('inquiries-completed') }}'" style="cursor:pointer">
-                                                    <h2 class="font-weight-bold">12</h2>
+                                                    <h2 class="font-weight-bold">{{ $resolvedinquiries->count() }}</h2>
                                                     <div>{{ __('site.completed') }}</div>
                                                 </div>
                                             </div>
@@ -81,7 +81,7 @@
                                         <div class="col-lg-4 col-md-12">
                                             <div class="card bg-success-bright text-success">
                                                 <div class="card-body text-center" onClick="location.href='{{ route('inquiries-processing') }}'" style="cursor:pointer">
-                                                    <h2 class="font-weight-bold">16</h2>
+                                                    <h2 class="font-weight-bold">{{ $processinquiries->count() }}</h2>
                                                     <div>{{ __('site.in_process') }}</div>
                                                 </div>
                                             </div>
@@ -90,7 +90,7 @@
                                         <div class="col-lg-4 col-md-12">
                                             <div class="card bg-danger-bright text-danger">
                                                 <div class="card-body text-center" onClick="location.href='{{ route('inquiries-queued') }}'" style="cursor:pointer">
-                                                    <h2 class="font-weight-bold">3</h2>
+                                                    <h2 class="font-weight-bold">{{ $queueinquiries->count() }}</h2>
                                                     <div>{{ __('site.queued') }}</div>
                                                 </div>
                                             </div>
@@ -262,94 +262,36 @@
                                         <table class="table table-striped mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-left">{{ __('site.inquiry') }}</th>
+                                                    <th>{{ __('site.inq_no') }}</th>
                                                     <th>{{ __('site.title') }}</th>
-                                                    <th>{{ __('site.contact_name') }}</th>
+                                                    <th>{{ __('site.customer') }}</th>
+                                                    <th>{{ __('site.cnic') }}</th>
+                                                    <th>{{ __('site.mobile') }}</th>
+                                                    <th>{{ __('site.city') }}</th>
+                                                    <th>{{ __('site.type') }}</th>
                                                     <th>{{ __('site.date') }}</th>
+                                                    <th>{{ __('site.time') }}</th>
                                                     <th>{{ __('site.status') }}</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($queuedinquiries as $queuedinquiry)
                                                 <tr>
+                                                    <td># {{ ($queuedinquiry->id) }}</td>
+                                                    <td>{{ ($queuedinquiry->title) }}</td>
+                                                    <td>{{ ($queuedinquiry->name) }}</td>
+                                                    <td>{{ ($queuedinquiry->cnic) }}</td>
+                                                    <td>{{ ($queuedinquiry->mobile) }}</td>
+                                                    <td>{{ ($queuedinquiry->city) }}</td>
+                                                    <td>{{ ($queuedinquiry->type) }}</td>
+                                                    <td>{{ ($queuedinquiry->created_at->format('d M Y')) }}</td>
+                                                    <td>{{ ($queuedinquiry->created_at->format('h:i:s')) }}</td>
                                                     <td>
-                                                        <a href="#">#3132</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Hotel Backup</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Qaiser Sherazi</a>
-                                                    </td>
-                                                    <td>20 October 2021</td>
-                                                    <td>
-                                                        <span class="badge badge-success">Completed</span>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <a href="#">#3133</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">System Upgrade</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Daniyal Ali</a>
-                                                    </td>
-                                                    <td>20 October 2021</td>
-                                                    <td>
-                                                        <span class="badge badge-danger">Queued</span>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <a href="#">#3134</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Additional Battries</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Muhammad Saad</a>
-                                                    </td>
-                                                    <td>1 October 2021</td>
-                                                    <td>
-                                                        <span class="badge badge-warning">Process</span>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <a href="#">#3135</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">High Power</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Ahsan Afaq</a>
-                                                    </td>
-                                                    <td>3 August 2021</td>
-                                                    <td>
-                                                        <span class="badge badge-warning">Process</span>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <a href="#">#3136</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">24/7 Backup</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Muhammad Shaheer</a>
-                                                    </td>
-                                                    <td>22 April 2019</td>
-                                                    <td>
-                                                        <span class="badge badge-danger">Queued</span>
+                                                        <span class="badge badge-danger">{{ __('site.queued') }}</span>
                                                     </td>
                                                 </tr>
                                             </tbody>
+                                            @endforeach
                                         </table>
                                     </div>
                                 </div>
