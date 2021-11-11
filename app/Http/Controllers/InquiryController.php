@@ -47,31 +47,43 @@ class InquiryController extends Controller
     public function detail(Request $request ,$id)
     {
         $inquirydetail = Inquiry::where('id' , $id)->first();
-        
+
         return view('inquiry-detail', compact('inquirydetail'));
     }
 
-    public function updatestatus($id)
+    public function updatestatusprocess($id)
     {
         $inquirydetail = inquiry::where('id' , '=' , $id)->update(['status' => 'process']);
 
         return redirect()->route('inquiries-queued')->with('message', __('site.success_move_to_process'));
     }
 
+    public function updatestatuscomplete($id)
+    {
+        $inquirydetail = inquiry::where('id' , '=' , $id)->update(['status' => 'complete']);
+
+        return redirect()->route('inquiries-processing')->with('message', __('site.success_move_to_complete'));
+    }
+
     public function queueinquiries()
     {
         $inquiry = Inquiry::where('status' , 'queued')->get();
+
         return view('inquiries-queued', compact('inquiry'));
     }
 
     public function processinquiries()
     {
-        return view('inquiries-processing');
+        $inquiry = Inquiry::where('status' , 'process')->get();
+
+        return view('inquiries-processing', compact('inquiry'));
     }
 
     public function completedinquiries()
     {
-        return view('inquiries-completed');
+        $inquiry = Inquiry::where('status' , 'complete')->get();
+
+        return view('inquiries-completed', compact('inquiry'));
     }
 
 }

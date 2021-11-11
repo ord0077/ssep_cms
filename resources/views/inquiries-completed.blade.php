@@ -28,157 +28,53 @@
                                     <table id="customers" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>{{ __('site.inquiriess') }}</th>
+                                                <th>{{ __('site.inq_no') }}</th>
                                                 <th>{{ __('site.title') }}</th>
                                                 <th>{{ __('site.customer') }}</th>
                                                 <th>{{ __('site.cnic') }}</th>
                                                 <th>{{ __('site.mobile') }}</th>
+                                                <th>{{ __('site.city') }}</th>
+                                                <th>{{ __('site.type') }}</th>
                                                 <th>{{ __('site.date') }}</th>
                                                 <th>{{ __('site.time') }}</th>
                                                 <th>{{ __('site.status') }}</th>
+                                                <th>{{ __('site.action') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($inquiry as $inquiry)
                                             <tr>
-                                                <td>#2133</td>
-                                                <td>Power Shortage</td>
-                                                <td>Hasan Khan</td>
-                                                <td>42501-8596477-8</td>
-                                                <td>03362051663</td>
-                                                <td>02 October 2021</td>
-                                                <td>02:38 pm</td>
+                                                <td># {{ ($inquiry->id) }}</td>
+                                                <td>{{ ($inquiry->title) }}</td>
+                                                <td>{{ ($inquiry->name) }}</td>
+                                                <td>{{ ($inquiry->cnic) }}</td>
+                                                <td>{{ ($inquiry->mobile) }}</td>
+                                                <td>{{ ($inquiry->city) }}</td>
+                                                <td>{{ ($inquiry->type) }}</td>
+                                                <td>{{ ($inquiry->created_at->format('d M Y')) }}</td>
+                                                <td>{{ ($inquiry->created_at->format('h:i:s')) }}</td>
                                                 <td>
-                                                    <span class="badge badge-success">Resolved</span>
+                                                    <span class="badge badge-success">{{ __('site.resolved') }}</span>
+                                                </td>
+                                                <td>
+                                                    <a href="{{ route('inquiry-detail', $inquiry->id) }}"><span class="badge badge-primary"><i class="fa fa-eye"></i> {{ __('site.view') }}</span></a>
                                                 </td>
                                             </tr>
-
-                                            <tr>
-                                                <td>#2133</td>
-                                                <td>Power Shortage</td>
-                                                <td>Hasan Khan</td>
-                                                <td>42501-8596477-8</td>
-                                                <td>03362051663</td>
-                                                <td>02 October 2021</td>
-                                                <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Resolved</span>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>#2133</td>
-                                                <td>Power Shortage</td>
-                                                <td>Hasan Khan</td>
-                                                <td>42501-8596477-8</td>
-                                                <td>03362051663</td>
-                                                <td>02 October 2021</td>
-                                                <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Resolved</span>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>#2133</td>
-                                                <td>Power Shortage</td>
-                                                <td>Hasan Khan</td>
-                                                <td>42501-8596477-8</td>
-                                                <td>03362051663</td>
-                                                <td>02 October 2021</td>
-                                                <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Resolved</span>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>#2133</td>
-                                                <td>Power Shortage</td>
-                                                <td>Hasan Khan</td>
-                                                <td>42501-8596477-8</td>
-                                                <td>03362051663</td>
-                                                <td>02 October 2021</td>
-                                                <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Resolved</span>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>#2133</td>
-                                                <td>Power Shortage</td>
-                                                <td>Hasan Khan</td>
-                                                <td>42501-8596477-8</td>
-                                                <td>03362051663</td>
-                                                <td>02 October 2021</td>
-                                                <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Resolved</span>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>#2133</td>
-                                                <td>Power Shortage</td>
-                                                <td>Hasan Khan</td>
-                                                <td>42501-8596477-8</td>
-                                                <td>03362051663</td>
-                                                <td>02 October 2021</td>
-                                                <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Resolved</span>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>#2133</td>
-                                                <td>Power Shortage</td>
-                                                <td>Hasan Khan</td>
-                                                <td>42501-8596477-8</td>
-                                                <td>03362051663</td>
-                                                <td>02 October 2021</td>
-                                                <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Resolved</span>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>#2133</td>
-                                                <td>Power Shortage</td>
-                                                <td>Hasan Khan</td>
-                                                <td>42501-8596477-8</td>
-                                                <td>03362051663</td>
-                                                <td>02 October 2021</td>
-                                                <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Resolved</span>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>#2133</td>
-                                                <td>Power Shortage</td>
-                                                <td>Hasan Khan</td>
-                                                <td>42501-8596477-8</td>
-                                                <td>03362051663</td>
-                                                <td>02 October 2021</td>
-                                                <td>02:38 pm</td>
-                                                <td>
-                                                    <span class="badge badge-success">Resolved</span>
-                                                </td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>{{ __('site.inquiriess') }}</th>
+                                                <th>{{ __('site.inq_no') }}</th>
                                                 <th>{{ __('site.title') }}</th>
                                                 <th>{{ __('site.customer') }}</th>
                                                 <th>{{ __('site.cnic') }}</th>
                                                 <th>{{ __('site.mobile') }}</th>
+                                                <th>{{ __('site.city') }}</th>
+                                                <th>{{ __('site.type') }}</th>
                                                 <th>{{ __('site.date') }}</th>
                                                 <th>{{ __('site.time') }}</th>
                                                 <th>{{ __('site.status') }}</th>
+                                                <th>{{ __('site.action') }}</th>
                                             </tr>
                                         </tfoot>
                                     </table>
