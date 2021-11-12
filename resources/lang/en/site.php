@@ -100,6 +100,7 @@ return [
     'type'                      =>  'Type',
     'inq_no'                    =>  'Inq No',
     'inquiry_submit'            =>  'Inquiry Submited Successfully',
+    'complain_submit'           =>  'Complain Submited Successfully',
     'inquiry_update'            =>  'Inquiry Updated Successfully',
     'view'                      =>  'View',
     'action'                    =>  'Action',

@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1>{{ __('site.register_new_complaint') }}</h1>
-                </div> 
+                </div>
                 <div class="col-md-4">
                  <div class="card">
                     <div class="card-body">
@@ -54,25 +54,26 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1>{{ __('site.complaint_form') }}</h1>
-                    <form class="needs-validation" novalidate autocomplete="off">
-                      <div class="form-row">
+                    <form class="needs-validation"  method="POST" action="{{ route('storecomplain') }}" novalidate autocomplete="off">
+                        {{csrf_field()}}
+                        <div class="form-row">
                         <div class="col-md-4 mb-3">
                           <label for="validationCustom01">{{ __('site.name') }}</label>
-                          <input type="text" class="form-control" id="validationCustom01" placeholder="{{ __('site.name') }}" value="" required>
+                          <input type="text" class="form-control" id="validationCustom01" name="name" placeholder="{{ __('site.name') }}" value="" required>
                           <div class="valid-feedback">
                             {{ __('site.looks_good') }}
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
                       <label for="validationCustom02">{{ __('site.mobile') }}</label>
-                      <input type="number" class="form-control" id="validationCustom02" placeholder="{{ __('site.mobile') }}" value="" required>
+                      <input type="number" class="form-control" id="validationCustom02" name="mobile" placeholder="{{ __('site.mobile') }}" value="" required>
                       <div class="valid-feedback">
                         {{ __('site.looks_good') }}
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                   <label for="validationCustom02">{{ __('site.cnic') }}</label>
-                  <input type="number" class="form-control" id="validationCustom02" placeholder="{{ __('site.cnic') }}" value="" required>
+                  <input type="number" class="form-control" id="validationCustom02" name="cnic" placeholder="{{ __('site.cnic') }}" value="" required>
                   <div class="valid-feedback">
                     {{ __('site.looks_good') }}
                 </div>
@@ -81,29 +82,28 @@
         <div class="form-row">
             <div class="col-md-8 mb-3">
               <label for="validationCustom03">{{ __('site.postal_address') }}</label>
-              <input type="text" class="form-control" id="validationCustom03" placeholder="{{ __('site.postal_address') }}" required>
+              <input type="text" class="form-control" id="validationCustom03" name="postal_address" placeholder="{{ __('site.postal_address') }}" required>
               <div class="invalid-feedback">
                 {{ __('site.provide_valid_address') }}
             </div>
         </div>
         <div class="col-md-4 mb-3">
           <label for="validationCustom03">{{ __('site.city') }}</label>
-          <input type="text" class="form-control" id="validationCustom03" placeholder="{{ __('site.city') }}" required>
+          <input type="text" class="form-control" id="validationCustom03" name="city" placeholder="{{ __('site.city') }}" required>
           <div class="invalid-feedback">
             {{ __('site.provide_valid_city') }}
         </div>
     </div>
     <div class="col-md-12 mb-3">
       <label for="validationCustom05">{{ __('site.complaint_title') }}</label>
-      <input type="text" class="form-control" id="validationCustom05" placeholder="{{ __('site.complaint_title') }}" required>
+      <input type="text" class="form-control" id="validationCustom05" name="title" placeholder="{{ __('site.complaint_title') }}" required>
       <div class="invalid-feedback">
         {{ __('site.provide_valid_title') }}
     </div>
 </div>
 <div class="col-md-12 mb-3">
   <label for="exampleFormControlSelect1">{{ __('site.complaint_type') }}</label>
-  <select class="form-control" id="exampleFormControlSelect1">
-    <option>{{ __('site.select') }}</option>
+  <select class="form-control" name="type" id="exampleFormControlSelect1">
     <option>{{ __('site.hardware_complaint') }}</option>
     <option>{{ __('site.power_complaint') }}</option>
     <option>{{ __('site.other') }}</option>
@@ -114,7 +114,7 @@
 </div>
 <div class="col-md-12 mb-3">
   <label for="validationCustom05">{{ __('site.complaint_details') }}</label>
-  <textarea class="form-control" id="validationCustom05" placeholder="{{ __('site.complaint_details') }}" required style="min-height: 200px;"></textarea>
+  <textarea class="form-control" id="validationCustom05" name="details" placeholder="{{ __('site.complaint_details') }}" required style="min-height: 200px;"></textarea>
   <div class="invalid-feedback">
     {{ __('site.provide_valid_details') }}
 </div>
