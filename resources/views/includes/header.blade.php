@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="{{ asset('vendors/prism/prism.css') }}" type="text/css">
 
         <!-- Vmap -->
-        <link rel="stylesheet" href="vendors/vmap/jqvmap.min.css">
+        <link rel="stylesheet" href="{{asset('vendors/vmap/jqvmap.min.css')}}">
     </head>
     <style type="text/css">
         #toast-container{

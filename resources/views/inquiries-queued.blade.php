@@ -66,7 +66,7 @@
                                                         <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="{{ route('inquiry-detail', $inquiry->id) }}"><i class="fa fa-pencil" style="font-size:14px"></i> Edit</a>
+                                                        <a class="dropdown-item" href="{{ route('edit-inquiry', $inquiry->id) }}"><i class="fa fa-pencil" style="font-size:14px"></i> Edit</a>
                                                         <a class="dropdown-item" href="{{ route('deleteinquiry', $inquiry->id) }}"><i class="fa fa-trash" style="font-size:14px"></i> Delete</a>
                                                     </div>
                                                 </div>
