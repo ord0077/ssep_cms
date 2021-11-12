@@ -25,8 +25,9 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form class="needs-validation" method="POST" action="{{ route('storeinquiry') }}" novalidate autocomplete="off">
+                                    <form class="needs-validation" method="POST" action="{{ route('updateinquiry', $inquirydetail->id) }}" novalidate autocomplete="off">
                                         {{csrf_field()}}
+                                        <input type="hidden" name="id" value="{{$inquirydetail->id}}">
                                         <div class="form-row">
                                             <div class="col-md-4 mb-3">
                                                 <label for="validationCustom01">{{ __('site.name') }}</label>

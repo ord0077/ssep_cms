@@ -51,6 +51,26 @@ class InquiryController extends Controller
     }
 
 
+    public function update(Request $request ,$id)
+    {
+        $inquiry    = Inquiry::find($id);
+
+        $inquiry->name      =   $request['name'];
+        $inquiry->mobile    =   $request['mobile'];
+        $inquiry->cnic      =   $request['cnic'];
+        $inquiry->postal_address  =   $request['postal_address'];
+        $inquiry->city  =   $request['city'];
+        $inquiry->title  =   $request['title'];
+        $inquiry->type  =   $request['type'];
+        $inquiry->details  =   $request['details'];
+        $inquiry->status    =   'queued';
+
+        $inquiry->save();
+
+        return redirect()->route('inquiries-queued')->with('message', __('site.inquiry_update'));
+    }
+
+
     public function detail(Request $request ,$id)
     {
         $inquirydetail = Inquiry::where('id' , $id)->first();

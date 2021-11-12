@@ -41,6 +41,7 @@ Route::get('complaints-resolved', [ComplaintController::class, 'resolvedcomplain
 
 Route::get('add-inquiry', [InquiryController::class, 'inquiryform'])->name('add-inquiry');
 Route::get('edit-inquiry/{id}', [InquiryController::class, 'editqueueinquiry'])->name('edit-inquiry');
+Route::post('update-inquiry/{id}', [InquiryController::class, 'update'])->name('updateinquiry');
 Route::post('add-inquiry', [InquiryController::class, 'store'])->name('storeinquiry');
 Route::get('inquiry-detail/{id}', [InquiryController::class, 'detail'])->name('inquiry-detail');
 Route::post('inquiry-update-process/{id}', [InquiryController::class, 'updatestatusprocess'])->name('updatestatusprocess');
