@@ -31,14 +31,23 @@ Route::get('registration', [CustomAuthController::class, 'registration'])->name(
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
+
+// Dashboard Routes
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+
+// Customers Routes
 Route::get('customers', [CustomerController::class, 'index'])->name('customers');
 
+
+// Complains Routes
 Route::get('add-complain', [ComplaintController::class, 'complaintform'])->name('add-complain');
 Route::get('complaints-queued', [ComplaintController::class, 'queuecomplains'])->name('complaints-queued');
 Route::get('complaints-processing', [ComplaintController::class, 'processcomplains'])->name('complaints-processing');
 Route::get('complaints-resolved', [ComplaintController::class, 'resolvedcomplains'])->name('complaints-resolved');
 
+
+// Inquiries Routes
 Route::get('add-inquiry', [InquiryController::class, 'inquiryform'])->name('add-inquiry');
 Route::get('edit-inquiry/{id}', [InquiryController::class, 'editqueueinquiry'])->name('edit-inquiry');
 Route::post('update-inquiry/{id}', [InquiryController::class, 'update'])->name('updateinquiry');
@@ -51,6 +60,8 @@ Route::get('inquiries-queued', [InquiryController::class, 'queueinquiries'])->na
 Route::get('inquiries-processing', [InquiryController::class, 'processinquiries'])->name('inquiries-processing');
 Route::get('inquiries-completed', [InquiryController::class, 'completedinquiries'])->name('inquiries-completed');
 
+
+// Calls Routes
 Route::get('missed-calls', [CallController::class, 'missedcalls'])->name('missed-calls');
 Route::get('received-calls', [CallController::class, 'recievedcalls'])->name('received-calls');
 

@@ -8,12 +8,14 @@ use Illuminate\Http\Request;
 
 class InquiryController extends Controller
 {
-
+    // Inquiry Form View
     public function inquiryform()
     {
         return view('add-inquiry');
     }
 
+
+    // Inquiry Sve Request
     public function store(Request $request)
     {
         $this->validate(request(),[
@@ -44,6 +46,8 @@ class InquiryController extends Controller
 
     }
 
+
+    // Edit Inquiry Form View
     public function editqueueinquiry($id)
     {
         $inquirydetail = Inquiry::where('id' , $id)->first();
@@ -51,8 +55,20 @@ class InquiryController extends Controller
     }
 
 
+    // Inquiry Update Request
     public function update(Request $request ,$id)
     {
+        $this->validate(request(),[
+            'name'  => 'required',
+            'mobile'  => 'required',
+            'cnic'  => 'required',
+            'postal_address'  => 'required',
+            'city'  => 'required',
+            'title'  => 'required',
+            'type'  => 'required',
+            'details'  => 'required',
+            ]);
+
         $inquiry    = Inquiry::find($id);
 
         $inquiry->name      =   $request['name'];
@@ -71,6 +87,7 @@ class InquiryController extends Controller
     }
 
 
+    // Inquiry Detail View
     public function detail(Request $request ,$id)
     {
         $inquirydetail = Inquiry::where('id' , $id)->first();
@@ -78,6 +95,8 @@ class InquiryController extends Controller
         return view('inquiry-detail', compact('inquirydetail'));
     }
 
+
+    // Inquiry Update Status to Process
     public function updatestatusprocess($id)
     {
         $inquirydetail = inquiry::where('id' , '=' , $id)->update(['status' => 'process']);
@@ -85,6 +104,8 @@ class InquiryController extends Controller
         return redirect()->route('inquiries-queued')->with('message', __('site.success_move_to_process'));
     }
 
+
+    // Inquiry Update Status to Complete
     public function updatestatuscomplete($id)
     {
         $inquirydetail = inquiry::where('id' , '=' , $id)->update(['status' => 'complete']);
@@ -92,6 +113,8 @@ class InquiryController extends Controller
         return redirect()->route('inquiries-processing')->with('message', __('site.success_move_to_complete'));
     }
 
+
+    // Inquiry Delete Request
     public function delete($id)
     {
         $inquirydetail = inquiry::where('id' , '=' , $id)->delete();
@@ -99,6 +122,8 @@ class InquiryController extends Controller
         return redirect()->route('inquiries-queued')->with('message', __('site.inquiry_deleted'));
     }
 
+
+    // Queue Inquiries view
     public function queueinquiries()
     {
         $inquiry = Inquiry::where('status' , 'queued')->get();
@@ -106,6 +131,8 @@ class InquiryController extends Controller
         return view('inquiries-queued', compact('inquiry'));
     }
 
+
+    // Process Inquiries view
     public function processinquiries()
     {
         $inquiry = Inquiry::where('status' , 'process')->get();
@@ -113,6 +140,8 @@ class InquiryController extends Controller
         return view('inquiries-processing', compact('inquiry'));
     }
 
+
+    // Resolved Inquiries view
     public function completedinquiries()
     {
         $inquiry = Inquiry::where('status' , 'complete')->get();
