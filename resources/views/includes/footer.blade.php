@@ -53,18 +53,5 @@
 <script src="{{ asset('vendors/charts/peity/jquery.peity.min.js') }}"></script>
 <script src="{{ asset('assets/js/examples/charts/peity.js') }}"></script>
 
-<!-- Active Nav -->
-<script>
-    $(document).ready(function(){
-        $('.side_navi li a').removeClass('active');
-        var current = location.pathname.split("/")[2];
-        $('.side_navi li a').each(function(){
-            var $this = $(this);
-            if($this.attr('href') == current){
-              $this.addClass('active');
-          }
-      });
-    });
-</script>
 </body>
 </html>
