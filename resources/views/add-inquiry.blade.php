@@ -75,7 +75,6 @@
                                             <div class="col-md-12 mb-3">
                                                 <label for="exampleFormControlSelect1">{{ __('site.inquiry_type') }}</label>
                                                 <select class="form-control" name="type" id="exampleFormControlSelect1">
-                                                    <option>{{ __('site.select') }}</option>
                                                     <option value="{{ __('site.hardware_inquiry') }}">{{ __('site.hardware_inquiry') }}</option>
                                                     <option value="{{ __('site.power_inquiry')}}">{{ __('site.power_inquiry') }}</option>
                                                     <option value="{{ __('site.other') }}">{{ __('site.other') }}</option>
