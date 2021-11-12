@@ -99,6 +99,7 @@ return [
     'call_id'                   =>  'Call ID',
     'type'                      =>  'Type',
     'inq_no'                    =>  'Inq No',
+    'comp_no'                   =>  'Comp No',
     'inquiry_submit'            =>  'Inquiry Submited Successfully',
     'complain_submit'           =>  'Complain Submited Successfully',
     'inquiry_update'            =>  'Inquiry Updated Successfully',

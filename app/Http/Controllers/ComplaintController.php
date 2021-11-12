@@ -46,9 +46,13 @@ class ComplaintController extends Controller
 
     }
 
+
+    // Queue Complains view
     public function queuecomplains()
     {
-        return view('complaints-queued');
+        $complain  = Complain::where('status' , 'queued')->get();
+
+        return view('complaints-queued', compact('complain'));
     }
 
     public function processcomplains()
