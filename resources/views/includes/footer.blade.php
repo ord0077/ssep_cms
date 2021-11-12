@@ -37,9 +37,6 @@
     <div class="bg-warning-bright"></div>
 </div>
 
-<!-- Plugin scripts -->
-<script src="{{ asset('vendors/bundle.js') }}"></script>
-
 <!-- App scripts -->
 <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
@@ -51,6 +48,10 @@
 
 <!-- Prism -->
 <script src="{{ asset('vendors/prism/prism.js') }}"></script>
+
+<!-- Peity -->
+<script src="{{ asset('vendors/charts/peity/jquery.peity.min.js') }}"></script>
+<script src="{{ asset('assets/js/examples/charts/peity.js') }}"></script>
 
 <!-- Active Nav -->
 <script>

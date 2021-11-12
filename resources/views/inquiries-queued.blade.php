@@ -38,7 +38,7 @@
                                                 <th>{{ __('site.date') }}</th>
                                                 <th>{{ __('site.time') }}</th>
                                                 <th>{{ __('site.status') }}</th>
-                                                <th>{{ __('site.action') }}</th>
+                                                <th style="min-width:100px">{{ __('site.action') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -56,46 +56,54 @@
                                                 <td>
                                                     <span class="badge badge-danger">{{ __('site.queued') }}</span>
                                                 </td>
-                                                <td>
+                                                <td style="min-width: 100px;">
                                                     <a href="{{ route('inquiry-detail', $inquiry->id) }}"><span class="badge badge-primary"><i class="fa fa-eye" style="font-size:14px"></i></span></a>
 
-                                                    <a href="{{ route('edit-inquiry') }}"><span class="badge badge-info"><i class="fa fa-pencil" style="font-size:14px"></i></span></a>
-
-                                                    <a href="{{ route('deleteinquiry', $inquiry->id) }}"><span class="badge badge-danger"><i class="fa fa-trash" style="font-size:14px"></i></span></a>
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>{{ __('site.inq_no') }}</th>
-                                                <th>{{ __('site.title') }}</th>
-                                                <th>{{ __('site.customer') }}</th>
-                                                <th>{{ __('site.cnic') }}</th>
-                                                <th>{{ __('site.mobile') }}</th>
-                                                <th>{{ __('site.city') }}</th>
-                                                <th>{{ __('site.type') }}</th>
-                                                <th>{{ __('site.date') }}</th>
-                                                <th>{{ __('site.time') }}</th>
-                                                <th>{{ __('site.status') }}</th>
-                                                <th>{{ __('site.action') }}</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown"
+                                                        class="btn btn-outline-light btn-sm"
+                                                        aria-haspopup="true" aria-expanded="false" style="margin-top:-2.5px">
+                                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a class="dropdown-item" href="{{ route('inquiry-detail', $inquiry->id) }}"><i class="fa fa-pencil" style="font-size:14px"></i> Edit</a>
+                                                        <a class="dropdown-item" href="{{ route('deleteinquiry', $inquiry->id) }}"><i class="fa fa-trash" style="font-size:14px"></i> Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>{{ __('site.inq_no') }}</th>
+                                            <th>{{ __('site.title') }}</th>
+                                            <th>{{ __('site.customer') }}</th>
+                                            <th>{{ __('site.cnic') }}</th>
+                                            <th>{{ __('site.mobile') }}</th>
+                                            <th>{{ __('site.city') }}</th>
+                                            <th>{{ __('site.type') }}</th>
+                                            <th>{{ __('site.date') }}</th>
+                                            <th>{{ __('site.time') }}</th>
+                                            <th>{{ __('site.status') }}</th>
+                                            <th style="min-width:100px">{{ __('site.action') }}</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        @include('includes.footer')
-        <script>
-            $(document).ready(function (){
-                $('#customers').dataTable( {
-                  "searching": true,
-                  "scrollY": "400px",
-                  "scrollCollapse": true,
-              });
-            });
-        </script>
+    </div>
+    @include('includes.footer')
+    <script>
+        $(document).ready(function (){
+            $('#customers').dataTable( {
+              "searching": true,
+              "scrollY": "400px",
+              "scrollCollapse": true,
+          });
+        });
+    </script>
