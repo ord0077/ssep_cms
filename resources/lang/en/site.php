@@ -113,4 +113,6 @@ return [
     'processing'                =>  'Processing',
     'resolved'                  =>  'Resolved',
     'edit_inquiry'              =>  'Edit Inquiry',
+    'edit'                      =>  'Edit',
+    'delete'                    =>  'Delete',
 ];

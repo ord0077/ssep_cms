@@ -15,7 +15,7 @@ class InquiryController extends Controller
     }
 
 
-    // Inquiry Sve Request
+    // Inquiry Save Request
     public function store(Request $request)
     {
         $this->validate(request(),[
