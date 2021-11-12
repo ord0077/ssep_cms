@@ -76,7 +76,7 @@
                                                 <label for="exampleFormControlSelect1">{{ __('site.inquiry_type') }}</label>
                                                 <select class="form-control" name="type" id="exampleFormControlSelect1">
                                                     <option value="{{ __('site.hardware_inquiry') }}" @if(isset($inquirydetail) && $inquirydetail->type == 'Hardware Inquiry') {{'selected'}} @endif>{{ __('site.hardware_inquiry') }}</option>
-                                                    <option value="{{ __('site.power_inquiry')}}" @if(isset($inquirydetail) && !$inquirydetail->type == 'Power Inquiry') {{'selected'}} @endif>{{ __('site.power_inquiry') }}</option>
+                                                    <option value="{{ __('site.power_inquiry')}}" @if(isset($inquirydetail) && $inquirydetail->type == 'Power Inquiry') {{'selected'}} @endif>{{ __('site.power_inquiry') }}</option>
                                                     <option value="{{ __('site.other') }}" @if(isset($inquirydetail) && $inquirydetail->type == 'Other') {{'selected'}} @endif>{{ __('site.other') }}</option>
                                                 </select>
                                                 <div class="invalid-feedback">
