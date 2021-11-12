@@ -38,7 +38,7 @@
                                                 <th>{{ __('site.date') }}</th>
                                                 <th>{{ __('site.time') }}</th>
                                                 <th>{{ __('site.status') }}</th>
-                                                <th style="min-width:100px">{{ __('site.action') }}</th>
+                                                <th>{{ __('site.action') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -86,7 +86,7 @@
                                             <th>{{ __('site.date') }}</th>
                                             <th>{{ __('site.time') }}</th>
                                             <th>{{ __('site.status') }}</th>
-                                            <th style="min-width:100px">{{ __('site.action') }}</th>
+                                            <th>{{ __('site.action') }}</th>
                                         </tr>
                                     </tfoot>
                                 </table>
