@@ -24,7 +24,7 @@
                         <div class="col-md-4">
                             <div class="card card-body" onClick="location.href='{{ route('complaints-queued') }}'" style="cursor:pointer">
                                 <h3 class="mb-3">
-                                    32
+                                    {{ $queuecomplains->count() }}
                                     <small>{{ __('site.new_complaints') }}</small>
                                 </h3>
                                 <div class="progress mb-2" style="height: 5px">
@@ -37,7 +37,7 @@
                         <div class="col-md-4">
                             <div class="card card-body" onClick="location.href='{{ route('complaints-processing') }}'" style="cursor:pointer">
                                 <h3 class="mb-3">
-                                    70
+                                    {{ $processcomplains->count() }}
                                     <small>{{ __('site.complaints_process') }}</small>
                                 </h3>
                                 <div class="progress mb-2" style="height: 5px">
@@ -50,7 +50,7 @@
                         <div class="col-md-4">
                             <div class="card card-body" onClick="location.href='{{ route('complaints-resolved') }}'" style="cursor:pointer">
                                 <h4 class="mb-3">
-                                    125
+                                    {{ $resolvedcomplains->count() }}
                                     <small>{{ __('site.complaints_resolved') }}</small>
                                 </h4>
                                 <div class="progress mb-2" style="height: 5px">
