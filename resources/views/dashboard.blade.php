@@ -178,7 +178,7 @@
                                                     <td>{{ ($queuedcomplain->created_at->format('d M Y')) }}</td>
                                                     <td>{{ ($queuedcomplain->created_at->format('h:i:s')) }}</td>
                                                     <td>
-                                                        <span class="badge badge-success">{{ __('site.resolved') }}</span>
+                                                        <span class="badge badge-danger">{{ __('site.queued') }}</span>
                                                     </td>
                                                 </tr>
                                                 @endforeach
