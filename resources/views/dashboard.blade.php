@@ -29,7 +29,7 @@
                                 </h3>
                                 <div class="progress mb-2" style="height: 5px">
                                     <div class="progress-bar bg-primary" role="progressbar"
-                                    style="width: 20%;"
+                                    style="width: {{ $queuecomplains->count() }}%;"
                                     aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                                 </h3>
                                 <div class="progress mb-2" style="height: 5px">
                                     <div class="progress-bar bg-success" role="progressbar"
-                                    style="width: 10%;"
+                                    style="width: {{ $processcomplains->count() }}%;"
                                     aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@
                                 </h4>
                                 <div class="progress mb-2" style="height: 5px">
                                     <div class="progress-bar bg-info" role="progressbar"
-                                    style="width: 40%;"
+                                    style="width: {{ $resolvedcomplains->count() }}%;"
                                     aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
