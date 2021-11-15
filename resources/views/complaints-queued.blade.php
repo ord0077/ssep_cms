@@ -84,6 +84,7 @@
                                                 <th>{{ __('site.date') }}</th>
                                                 <th>{{ __('site.time') }}</th>
                                                 <th>{{ __('site.status') }}</th>
+                                                <th>{{ __('site.action') }}</th>
                                             </tr>
                                         </tfoot>
                                     </table>

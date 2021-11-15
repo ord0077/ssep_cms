@@ -47,6 +47,14 @@ class ComplaintController extends Controller
     }
 
 
+      // Edit Complain Form View
+      public function editqueuecomplain($id)
+      {
+          $complaindetail = Complain::where('id' , $id)->first();
+          return view('edit-complain', compact('complaindetail'));
+      }
+
+
     // Queue Complains view
     public function queuecomplains()
     {
