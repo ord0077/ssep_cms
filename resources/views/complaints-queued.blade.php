@@ -57,7 +57,7 @@
                                                     <span class="badge badge-danger">{{ __('site.queued') }}</span>
                                                 </td>
                                                 <td style="min-width: 100px;">
-                                                    <a href=""><span class="badge badge-primary"><i class="fa fa-eye" style="font-size:14px"></i></span></a>
+                                                    <a href="{{ route('complain-detail', $complain->id) }}"><span class="badge badge-primary"><i class="fa fa-eye" style="font-size:14px"></i></span></a>
 
                                                     <div class="dropdown">
                                                         <a href="#" data-toggle="dropdown" class="btn btn-outline-light btn-sm" aria-haspopup="true" aria-expanded="false" style="margin-top:-2.5px">
@@ -65,7 +65,7 @@
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
                                                             <a class="dropdown-item" href="{{ route('edit-complain', $complain->id) }}"><i class="fa fa-pencil" style="font-size:14px"></i> {{ __('site.edit') }}</a>
-                                                            <a class="dropdown-item" href=""><i class="fa fa-trash" style="font-size:14px"></i> {{ __('site.delete') }}</a>
+                                                            <a class="dropdown-item" href="{{ route('deletecomplain', $complain->id) }}"><i class="fa fa-trash" style="font-size:14px"></i> {{ __('site.delete') }}</a>
                                                         </div>
                                                     </div>
                                                 </td>

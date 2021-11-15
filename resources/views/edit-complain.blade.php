@@ -67,14 +67,14 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mb-3">
-                                                <label for="validationCustom05">{{ __('site.inquiry_title') }}</label>
+                                                <label for="validationCustom05">{{ __('site.complaint_title') }}</label>
                                                 <input type="text" class="form-control" id="validationCustom05" name="title" placeholder="{{ __('site.inquiry_title') }}" value="{{old('title', isset($complaindetail) ? $complaindetail->title : null)}}" required>
                                                 <div class="invalid-feedback">
                                                     {{ __('site.provide_valid_title') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mb-3">
-                                                <label for="exampleFormControlSelect1">{{ __('site.inquiry_type') }}</label>
+                                                <label for="exampleFormControlSelect1">{{ __('site.complaint_type') }}</label>
                                                 <select class="form-control" name="type" id="exampleFormControlSelect1">
                                                     <option value="{{ __('site.hardware_inquiry') }}" @if(isset($complaindetail) && $complaindetail->type == 'Hardware Inquiry') {{'selected'}} @endif>{{ __('site.hardware_inquiry') }}</option>
                                                     <option value="{{ __('site.power_inquiry')}}" @if(isset($complaindetail) && $complaindetail->type == 'Power Inquiry') {{'selected'}} @endif>{{ __('site.power_inquiry') }}</option>
@@ -85,7 +85,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mb-3">
-                                                <label for="validationCustom05">{{ __('site.inquiry_details') }}</label>
+                                                <label for="validationCustom05">{{ __('site.complaint_details') }}</label>
                                                 <textarea class="form-control" id="validationCustom05" name="details" placeholder="{{ __('site.inquiry_details') }}" required style="min-height: 200px;">{{old('details', isset($complaindetail) ? $complaindetail->details : null)}}</textarea>
                                                 <div class="invalid-feedback">
                                                     {{ __('site.provide_valid_details') }}

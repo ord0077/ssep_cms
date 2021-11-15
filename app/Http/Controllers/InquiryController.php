@@ -99,7 +99,7 @@ class InquiryController extends Controller
     // Inquiry Update Status to Process
     public function updatestatusprocess($id)
     {
-        $inquirydetail = inquiry::where('id' , '=' , $id)->update(['status' => 'process']);
+        $inquirydetail = Inquiry::where('id' , '=' , $id)->update(['status' => 'process']);
 
         return redirect()->route('inquiries-queued')->with('message', __('site.success_move_to_process'));
     }
@@ -108,7 +108,7 @@ class InquiryController extends Controller
     // Inquiry Update Status to Complete
     public function updatestatuscomplete($id)
     {
-        $inquirydetail = inquiry::where('id' , '=' , $id)->update(['status' => 'complete']);
+        $inquirydetail = Inquiry::where('id' , '=' , $id)->update(['status' => 'complete']);
 
         return redirect()->route('inquiries-processing')->with('message', __('site.success_move_to_complete'));
     }
@@ -117,7 +117,7 @@ class InquiryController extends Controller
     // Inquiry Delete Request
     public function delete($id)
     {
-        $inquirydetail = inquiry::where('id' , '=' , $id)->delete();
+        $inquirydetail = Inquiry::where('id' , '=' , $id)->delete();
 
         return redirect()->route('inquiries-queued')->with('message', __('site.inquiry_deleted'));
     }
