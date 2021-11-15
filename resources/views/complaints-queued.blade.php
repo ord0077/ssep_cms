@@ -64,7 +64,7 @@
                                                             <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href=""><i class="fa fa-pencil" style="font-size:14px"></i> {{ __('site.edit') }}</a>
+                                                            <a class="dropdown-item" href="{{ route('edit-complain', $complain->id) }}"><i class="fa fa-pencil" style="font-size:14px"></i> {{ __('site.edit') }}</a>
                                                             <a class="dropdown-item" href=""><i class="fa fa-trash" style="font-size:14px"></i> {{ __('site.delete') }}</a>
                                                         </div>
                                                     </div>

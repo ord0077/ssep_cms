@@ -43,7 +43,8 @@ Route::get('customers', [CustomerController::class, 'index'])->name('customers')
 // Complains Routes
 Route::get('add-complain', [ComplaintController::class, 'complaintform'])->name('add-complain');
 Route::post('add-complain', [ComplaintController::class, 'store'])->name('storecomplain');
-Route::get('edit-complain/{id}', [InquiryController::class, 'editqueuecomplain'])->name('edit-complain');
+Route::get('edit-complain/{id}', [ComplaintController::class, 'editqueuecomplain'])->name('edit-complain');
+Route::post('update-complain/{id}', [ComplaintController::class, 'update'])->name('updatecomplain');
 Route::get('complaints-queued', [ComplaintController::class, 'queuecomplains'])->name('complaints-queued');
 Route::get('complaints-processing', [ComplaintController::class, 'processcomplains'])->name('complaints-processing');
 Route::get('complaints-resolved', [ComplaintController::class, 'resolvedcomplains'])->name('complaints-resolved');

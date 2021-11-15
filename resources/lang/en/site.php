@@ -103,6 +103,7 @@ return [
     'inquiry_submit'            =>  'Inquiry Submited Successfully',
     'complain_submit'           =>  'Complain Submited Successfully',
     'inquiry_update'            =>  'Inquiry Updated Successfully',
+    'complain_update'            =>  'Complain Updated Successfully',
     'view'                      =>  'View',
     'action'                    =>  'Action',
     'inquiry_detail'            =>  'Inquiry Detail',
@@ -115,6 +116,7 @@ return [
     'processing'                =>  'Processing',
     'resolved'                  =>  'Resolved',
     'edit_inquiry'              =>  'Edit Inquiry',
+    'edit_complain'              =>  'Edit Complain',
     'edit'                      =>  'Edit',
     'delete'                    =>  'Delete',
 ];

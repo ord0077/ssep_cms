@@ -55,6 +55,37 @@ class ComplaintController extends Controller
       }
 
 
+      // complain Update Request
+    public function update(Request $request ,$id)
+    {
+        $this->validate(request(),[
+            'name'  => 'required',
+            'mobile'  => 'required',
+            'cnic'  => 'required',
+            'postal_address'  => 'required',
+            'city'  => 'required',
+            'title'  => 'required',
+            'type'  => 'required',
+            'details'  => 'required',
+            ]);
+
+        $complain    = Complain::find($id);
+
+        $complain->name      =   $request['name'];
+        $complain->mobile    =   $request['mobile'];
+        $complain->cnic      =   $request['cnic'];
+        $complain->postal_address  =   $request['postal_address'];
+        $complain->city  =   $request['city'];
+        $complain->title  =   $request['title'];
+        $complain->type  =   $request['type'];
+        $complain->details  =   $request['details'];
+        $complain->status    =   'queued';
+
+        $complain->save();
+
+        return redirect()->route('complaints-queued')->with('message', __('site.complain_update'));
+    }
+
     // Queue Complains view
     public function queuecomplains()
     {
