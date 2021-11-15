@@ -156,90 +156,32 @@
                                                     <th class="text-left">{{ __('site.complaint') }}</th>
                                                     <th>{{ __('site.title') }}</th>
                                                     <th>{{ __('site.customer') }}</th>
+                                                    <th>{{ __('site.cnic') }}</th>
+                                                    <th>{{ __('site.mobile') }}</th>
+                                                    <th>{{ __('site.city') }}</th>
+                                                    <th>{{ __('site.type') }}</th>
                                                     <th>{{ __('site.date') }}</th>
+                                                    <th>{{ __('site.time') }}</th>
                                                     <th>{{ __('site.status') }}</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($queuedcomplains as $queuedcomplain)
                                                 <tr>
+                                                    <td># {{ ($queuedcomplain->id) }}</td>
+                                                    <td>{{ ($queuedcomplain->title) }}</td>
+                                                    <td>{{ ($queuedcomplain->name) }}</td>
+                                                    <td>{{ ($queuedcomplain->cnic) }}</td>
+                                                    <td>{{ ($queuedcomplain->mobile) }}</td>
+                                                    <td>{{ ($queuedcomplain->city) }}</td>
+                                                    <td>{{ ($queuedcomplain->type) }}</td>
+                                                    <td>{{ ($queuedcomplain->created_at->format('d M Y')) }}</td>
+                                                    <td>{{ ($queuedcomplain->created_at->format('h:i:s')) }}</td>
                                                     <td>
-                                                        <a href="#">#3132</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Power Down</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Qaiser Sherazi</a>
-                                                    </td>
-                                                    <td>20 October 2021</td>
-                                                    <td>
-                                                        <span class="badge badge-success">Resolved</span>
+                                                        <span class="badge badge-success">{{ __('site.resolved') }}</span>
                                                     </td>
                                                 </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <a href="#">#3133</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Shortage</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Daniyal Ali</a>
-                                                    </td>
-                                                    <td>20 October 2021</td>
-                                                    <td>
-                                                        <span class="badge badge-danger">Queued</span>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <a href="#">#3134</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Shot Circuit</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Muhammad Saad</a>
-                                                    </td>
-                                                    <td>1 October 2021</td>
-                                                    <td>
-                                                        <span class="badge badge-warning">Process</span>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <a href="#">#3135</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">System Maintenance</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Ahsan Afaq</a>
-                                                    </td>
-                                                    <td>3 August 2021</td>
-                                                    <td>
-                                                        <span class="badge badge-warning">Process</span>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <a href="#">#3136</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Low Voltage</a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">Muhammad Shaheer</a>
-                                                    </td>
-                                                    <td>22 April 2019</td>
-                                                    <td>
-                                                        <span class="badge badge-danger">Queued</span>
-                                                    </td>
-                                                </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
